@@ -1,0 +1,38 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "dataset",
+  "about_url": "http://github.com/open-data/ckanext-fluent",
+  "form_languages": ["es", "en"],
+  "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": {
+          "en": "Title",
+          "fr": "Titre"},
+      "preset": "title",
+      "form_placeholder": "eg. Yellow Submarine"
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": "eg. yellow-submarine"
+    },
+    {
+      "field_name": "Books",
+      "label": {
+          "es": "Libros",
+          "en": "Books"},
+      "preset": "fluent_text",
+      "form_placeholder": "eg. Book Title",
+      "display_snippet": "panama_fluent_text.html"
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "URL",
+      "preset": "resource_url_upload"
+    }
+  ]
+}
