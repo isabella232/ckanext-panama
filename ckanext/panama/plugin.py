@@ -27,30 +27,39 @@ class PanamaPlugin(plugins.SingletonPlugin):
 
     # IPackageController
 
-    def _add_to_pkg_dict(self, pkg_dict):
-        '''Ensure pkg_dict[<core field>] is set to the current lang if
-        available, or default locale if not.'''
+    def _fluent_to_core_fields(self, pkg_dict):
+        '''Update the core field value in the pkg_dict with the mapped fluent
+        field value in the current language, or of the default locale.'''
 
         # mapping between fluent field and core field
         fluent_core_field_map = [('fluent_title', 'title'),
-                                 ('fluent_notes', 'notes')]
+                                 ('fluent_notes', 'notes'),
+                                 ('fluent_name', 'name'),
+                                 ('fluent_description', 'description')]
 
-        for field_map in fluent_core_field_map:
-            fluent_field = pkg_dict.get(field_map[0])
-            if fluent_field:
+        def add_to_dict(dic, field_map):
+            fluent_field = dic.get(field_map[0])
+            if fluent_field and type(fluent_field) is dict:
                 current_lang = lib_helpers.lang()
                 if fluent_field.get(current_lang):
-                    pkg_dict[field_map[1]] = fluent_field[current_lang]
+                    dic[field_map[1]] = fluent_field[current_lang]
                 else:
-                    pkg_dict[field_map[1]] = \
+                    dic[field_map[1]] = \
                         fluent_field[get_default_locale()]
+            return dic
+
+        for field_map in fluent_core_field_map:
+            # for packages
+            add_to_dict(pkg_dict, field_map)
+
+            # for resources
+            for res_dict in pkg_dict['resources']:
+                add_to_dict(res_dict, field_map)
 
         return pkg_dict
 
     def before_view(self, pkg_dict):
-
-        return self._add_to_pkg_dict(pkg_dict)
+        return self._fluent_to_core_fields(pkg_dict)
 
     def after_show(self, context, pkg_dict):
-
-        return self._add_to_pkg_dict(pkg_dict)
+        return self._fluent_to_core_fields(pkg_dict)
