@@ -1,0 +1,65 @@
+.button-colour(@btn-bg-colour, @btn-text-colour: #fff) {
+  .gradient(@btn-bg-colour);
+  border-color: @btn-bg-colour;
+  color: @btn-text-colour;
+  transition: background-color 0.2s ease-in 0s;
+  &:hover,
+  &:focus {
+    color: @btn-text-colour;
+    background-color:darken(saturate(@btn-bg-colour, 15%), 7%);
+    border-color:darken(saturate(@btn-bg-colour, 15%), 7%);
+  }
+}
+
+.body-font {
+  font-family: @font-family-sans-serif;
+  color:@text-color;
+  font-size:@font-size;
+  line-height:1.5;
+}
+
+.full-width {
+  margin-left: -9999rem;
+  margin-right: -9999rem;
+  padding-left: 9999rem;
+  padding-right: 9999rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.gradient (@colour: @secondary) {
+    background: @colour;
+    background: -moz-linear-gradient(top, @colour 4%, darken(@colour, 18%) 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(4%,@colour), color-stop(95%,darken(@colour, 18%)));
+    background: -webkit-linear-gradient(top, @colour 4%,darken(@colour, 18%) 95%);
+    background: -o-linear-gradient(top, @colour 4%,darken(@colour, 18%) 95%);
+    background: -ms-linear-gradient(top, @colour 4%,darken(@colour, 18%) 95%);
+    background: linear-gradient(to bottom, @colour 4%,darken(@colour, 18%) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@colour', endColorstr='#8da34f',GradientType=0 );
+}
+
+.blue-gradient {
+    background: #004eb8;
+    background: -moz-linear-gradient(top, #004eb8 19%, #00398d 71%, #001e5e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(19%,#004eb8), color-stop(71%,#00398d), color-stop(100%,#001e5e));
+    background: -webkit-linear-gradient(top, #004eb8 19%,#00398d 71%,#001e5e 100%);
+    background: -o-linear-gradient(top, #004eb8 19%,#00398d 71%,#001e5e 100%);
+    background: -ms-linear-gradient(top, #004eb8 19%,#00398d 71%,#001e5e 100%);
+    background: linear-gradient(to bottom, #004eb8 19%,#00398d 71%,#001e5e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004eb8', endColorstr='#001e5e',GradientType=0 );
+}
+
+.box-shadow {
+    -webkit-box-shadow: inset 0 3px 10px #022869;
+    -moz-box-shadow:    inset 0 3px 10px #022869;
+    box-shadow:         inset 0 3px 10px #022869;
+}
