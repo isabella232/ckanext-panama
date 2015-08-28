@@ -10,10 +10,8 @@
     'notes',
     'tag_string',
     'license_id',
-    'owner_org',
-    'fluent_title',
-    'fluent_notes'
-    ] -%}
+    'owner_org'
+    ] + h.get_extra_exclude_fields() -%}
 
   {%- for field in schema.dataset_fields -%}
     {%- if field.field_name not in exclude_fields

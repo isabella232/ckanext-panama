@@ -2,7 +2,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.lib.helpers as lib_helpers
 
-from ckanext.panama.helpers import get_default_locale
+import ckanext.panama.helpers as panama_helpers
 
 import logging
 log = logging.getLogger(__name__)
@@ -23,7 +23,10 @@ class PanamaPlugin(plugins.SingletonPlugin):
     # ITemplateHelpers
 
     def get_helpers(self):
-        return {'get_default_locale': get_default_locale}
+        return {
+            'get_default_locale': panama_helpers.get_default_locale,
+            'get_extra_exclude_fields': panama_helpers.get_extra_exclude_fields
+        }
 
     # IPackageController
 
@@ -45,7 +48,7 @@ class PanamaPlugin(plugins.SingletonPlugin):
                     dic[field_map[1]] = fluent_field[current_lang]
                 else:
                     dic[field_map[1]] = \
-                        fluent_field[get_default_locale()]
+                        fluent_field[panama_helpers.get_default_locale()]
             return dic
 
         for field_map in fluent_core_field_map:

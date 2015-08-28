@@ -4,10 +4,8 @@
     'name',
     'description',
     'url',
-    'format',
-    'fluent_name',
-    'fluent_description'
-    ] -%}
+    'format'
+    ]  + h.get_extra_exclude_fields() -%}
 {%- set schema = h.scheming_get_dataset_schema(dataset_type) -%}
 
 {% block resource_additional_information_inner %}
