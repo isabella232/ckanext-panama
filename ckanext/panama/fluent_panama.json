@@ -21,6 +21,12 @@
       "form_placeholder": "eg. yellow-submarine"
     },
     {
+      "field_name": "fluent_notes",
+      "label": "Description",
+      "preset": "fluent_markdown",
+      "form_placeholder": "eg. Some useful notes about the data"
+    },
+    {
       "field_name": "Books",
       "label": {
           "es": "Libros",

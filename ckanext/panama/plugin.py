@@ -28,16 +28,22 @@ class PanamaPlugin(plugins.SingletonPlugin):
     # IPackageController
 
     def _add_to_pkg_dict(self, pkg_dict):
-        '''Ensure pkg_dict['title'] is set to the current lang if available,
-        or default locale if not.'''
-        fluent_title = pkg_dict.get('fluent_title')
-        if fluent_title:
-            current_lang = lib_helpers.lang()
-            if fluent_title.get(current_lang):
-                pkg_dict['title'] = fluent_title[current_lang]
-            else:
-                pkg_dict['title'] = \
-                    fluent_title[get_default_locale()]
+        '''Ensure pkg_dict[<core field>] is set to the current lang if
+        available, or default locale if not.'''
+
+        # mapping between fluent field and core field
+        fluent_core_field_map = [('fluent_title', 'title'),
+                                 ('fluent_notes', 'notes')]
+
+        for field_map in fluent_core_field_map:
+            fluent_field = pkg_dict.get(field_map[0])
+            if fluent_field:
+                current_lang = lib_helpers.lang()
+                if fluent_field.get(current_lang):
+                    pkg_dict[field_map[1]] = fluent_field[current_lang]
+                else:
+                    pkg_dict[field_map[1]] = \
+                        fluent_field[get_default_locale()]
 
         return pkg_dict
 
