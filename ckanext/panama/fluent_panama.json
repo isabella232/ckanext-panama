@@ -5,12 +5,14 @@
   "form_languages": ["es", "en"],
   "dataset_fields": [
     {
-      "field_name": "title",
+      "field_name": "fluent_title",
       "label": {
           "en": "Title",
           "fr": "Titre"},
-      "preset": "title",
-      "form_placeholder": "eg. Yellow Submarine"
+      "preset": "fluent_text",
+      "form_placeholder": "eg. Yellow Submarine",
+      "display_snippet": "panama_fluent_text.html",
+      "form_snippet": "panama_fluent_text.html"
     },
     {
       "field_name": "name",
