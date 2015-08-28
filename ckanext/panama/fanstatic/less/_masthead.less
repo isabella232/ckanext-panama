@@ -1,0 +1,62 @@
+.masthead {
+    hgroup {
+        .blue-gradient;
+        .box-shadow;
+        .full-width;
+        
+        .logo {
+        }
+    }
+    
+    .btn-navbar {
+        position: relative;
+        background-color: @accent;
+        border-radius: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .nav-collapse {
+        background-color: @primary;
+        clear:both;
+        position:static;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        .navigation {
+            @media (min-width: @large-screen) {
+                .gradient;
+                .full-width;
+            
+                .nav > li {
+                    border-right: 1px solid #8f9a4c;
+                    border-left: 1px solid #d0db80;
+                }
+                .nav-pills li a:hover,
+                .nav-pills li.active a {
+                    background-color: transparent;
+                }
+            }
+        }
+        
+        .site-search {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            
+            .field {
+            
+                input[type="text"] {
+                    border-color: @mediumgrey;
+                    border-radius: 0;
+                }
+                
+                .btn-search {
+                    margin-top: -13px;
+                }
+            }
+        }
+    }
+}
