@@ -8,41 +8,24 @@
 .. image:: https://coveralls.io/repos//ckanext-panama/badge.png?branch=master
   :target: https://coveralls.io/r//ckanext-panama?branch=master
 
-.. image:: https://pypip.in/download/ckanext-panama/badge.svg
-    :target: https://pypi.python.org/pypi//ckanext-panama/
-    :alt: Downloads
 
-.. image:: https://pypip.in/version/ckanext-panama/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-panama/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/py_versions/ckanext-panama/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-panama/
-    :alt: Supported Python versions
-
-.. image:: https://pypip.in/status/ckanext-panama/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-panama/
-    :alt: Development Status
-
-.. image:: https://pypip.in/license/ckanext-panama/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-panama/
-    :alt: License
-
-=============
+==============
 ckanext-panama
-=============
+==============
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
+An Open Data portal for Panama
 
 
 ------------
 Requirements
 ------------
 
-For example, you might want to mention here which versions of CKAN this
-extension works with.
+* ckanext-scheming: https://github.com/open-data/ckanext-scheming
+* ckanext-fluent: https://github.com/open-data/ckanext-fluent
+
+Add these to the `ckan.plugins` setting in order::
+
+  ckan.plugins = ... panama fluent scheming_datasets
 
 
 ------------
@@ -110,9 +93,9 @@ coverage installed in your virtualenv (``pip install coverage``) then run::
     nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.panama --cover-inclusive --cover-erase --cover-tests
 
 
----------------------------------
+----------------------------------
 Registering ckanext-panama on PyPI
----------------------------------
+----------------------------------
 
 ckanext-panama should be availabe on PyPI as
 https://pypi.python.org/pypi/ckanext-panama. If that link doesn't work, then
@@ -139,9 +122,9 @@ steps:
        git push --tags
 
 
-----------------------------------------
+-----------------------------------------
 Releasing a New Version of ckanext-panama
-----------------------------------------
+-----------------------------------------
 
 ckanext-panama is availabe on PyPI as https://pypi.python.org/pypi/ckanext-panama.
 To publish a new version to PyPI follow these steps:
