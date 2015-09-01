@@ -8,6 +8,30 @@ body,
   background-color:inherit;
 }
 
+.account-masthead .account {
+    ul li a {
+        color: inherit;
+
+        &:hover {
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+    
+    .notifications {
+        a span.badge {
+            display: none;
+        }
+        
+        &.notifications-important {
+            a span.badge {
+                display: inline-block;
+                background-color: @danger;
+            }
+        }
+    }
+}
+
 .masthead .nav-collapse,
 .masthead .section,
 .navbar .nav {
@@ -108,6 +132,11 @@ a:focus {
 .page-header,
 [role="main"] .wrapper.no-nav > .module > .module-content.page-header {
   .full-width;
+  background-color: @lightgrey;
+    
+    .content_action {
+        margin-right: 0;
+    }
 }
 
 [role="main"] {

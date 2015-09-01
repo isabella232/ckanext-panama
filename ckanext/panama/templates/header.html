@@ -1,0 +1,19 @@
+{% ckan_extends %}
+
+{% block header_site_navigation %}
+<ul class="languages">
+    <li class="active"><a href="#">EN</a></li>
+    <li><a href="#">ES</a></li>
+</ul>
+
+<nav class="section navigation">
+    <ul class="nav nav-pills">
+    {% block header_site_navigation_tabs %}
+        {{ super() }}
+    {% endblock %}
+    <li class="contact">
+        {{ _('Get in touch') }}: <a href="https://www.facebook.com/InnovacionPma"><i class="icon-facebook"></i> Facebook</a> <a href="https://twitter.com/innovacionpma"><i class="icon-twitter"></i> Twitter</a>
+    </li>
+    </ul>
+</nav>
+{% endblock %}
