@@ -9,15 +9,30 @@
         .full-width;
         
         .logo {
+            height: 100px;
+            line-height: 100px;
+            display: block;
+            width: 200px;
+            
+            @media (min-width: @medium-screen) {
+                width: 265px;
+            }
         }
     }
     
-    .btn-navbar {
+    .btn-navbar,
+    .btn-navbar:hover,
+    .btn-navbar:focus,
+    .btn-navbar:active,
+    .btn-navbar.active,
+    .btn-navbar.disabled,
+    .btn-navbar[disabled] {
         position: relative;
         background-color: @accent;
         border-radius: 8px;
         padding-top: 10px;
         padding-bottom: 10px;
+        margin-top: 33px;
     }
     
     .nav-collapse {
@@ -59,7 +74,7 @@
             }
             @media (min-width: @large-screen) {
                 position: absolute;
-                top: 0;
+                top: 28px;
                 right: 0;
             }
         }
