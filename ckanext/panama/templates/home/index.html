@@ -14,23 +14,31 @@
             {% endfor %}
             </ul>
         </section>
-        <section>
-            <h2>{{ _('Latest News') }}</h2>
-            {% set posts = h.get_recent_blog_posts(3) %}
-            <ul class="latest-posts">
-              {% for post in posts %}
-              <li>
-              <span class="post">
-                  <small class="date"> {{ h.render_datetime(post.publish_date) }} </small>
-                <h4><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a></h4>
-                
-                <span class="text">{{ h.markdown_extract(post.content) }}</span>
-                <a class="more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{% trans %}More{% endtrans %} »</a>
-              </span>
-              </li>
-              {% endfor %}
-            </ul>
-        </section>
+        
+        <div class="row">
+            <section class="span6">
+                <h2>{{ _('Latest Datasets') }}</h2>
+                TODO: Most recently updated datasets
+            </section>
+
+            <section class="span6">
+                <h2>{{ _('Latest News') }}</h2>
+                {% set posts = h.get_recent_blog_posts(3) %}
+                <ul class="latest-posts">
+                  {% for post in posts %}
+                  <li>
+                  <span class="post">
+                      <small class="date"> {{ h.render_datetime(post.publish_date) }} </small>
+                    <h4><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a></h4>
+
+                    <span class="text">{{ h.markdown_extract(post.content) }}</span>
+                    <a class="more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{% trans %}More{% endtrans %} »</a>
+                  </span>
+                  </li>
+                  {% endfor %}
+                </ul>
+            </section>
+          </div>
       </div>
   </div>
 {% endblock %}
