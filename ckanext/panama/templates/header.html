@@ -1,9 +1,14 @@
 {% ckan_extends %}
 
 {% block header_site_navigation %}
+
+{% set current_url = request.environ.CKAN_CURRENT_URL %}
+{% set current_lang = request.environ.CKAN_LANG %}
+
 <ul class="languages">
-    <li class="active"><a href="#">EN</a></li>
-    <li><a href="#">ES</a></li>
+{% for locale in h.get_available_locales() %}
+    <li {% if locale == current_lang %}class="active"{% endif %}><a href="{% url_for current_url, locale=locale %}">{% filter upper %}{{ locale }}{% endfilter %}</a></li>
+{% endfor %}
 </ul>
 
 <nav class="section navigation">
