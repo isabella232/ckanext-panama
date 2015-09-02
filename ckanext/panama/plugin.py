@@ -25,7 +25,10 @@ class PanamaPlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'get_default_locale': panama_helpers.get_default_locale,
-            'get_extra_exclude_fields': panama_helpers.get_extra_exclude_fields
+            'get_extra_exclude_fields':
+                panama_helpers.get_extra_exclude_fields,
+            'get_recently_updated_panama_datasets':
+                panama_helpers.get_recently_updated_panama_datasets
         }
 
     # IPackageController
@@ -56,9 +59,15 @@ class PanamaPlugin(plugins.SingletonPlugin):
             add_to_dict(pkg_dict, field_map)
 
             # for resources
-            for res_dict in pkg_dict['resources']:
-                add_to_dict(res_dict, field_map)
+            if pkg_dict.get('resources'):
+                for res_dict in pkg_dict['resources']:
+                    add_to_dict(res_dict, field_map)
 
+        return pkg_dict
+
+    def before_index(self, pkg_dict):
+        pkg_dict = self._fluent_to_core_fields(pkg_dict)
+        log.info(pkg_dict)
         return pkg_dict
 
     def before_view(self, pkg_dict):
