@@ -1,5 +1,5 @@
 <dl>
-{% for dataset in h.get_recently_updated_datasets() %}
+{% for dataset in h.get_recently_updated_panama_datasets() %}
   <dt><a href="{{ h.url_for('dataset_read', id=dataset.name) }}">{{ dataset.title }}</a></dt>
   <dd>{{ h.markdown_extract(dataset.notes) }}</dd>
 {% endfor %}
