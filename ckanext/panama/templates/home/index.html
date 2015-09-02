@@ -4,21 +4,21 @@
   <div class="homepage">
     <div class="container">
         {{ self.flash() }}
-    
+
         {% snippet 'home/snippets/search.html' %}
         <section>
             <h2>{{ _('Featured Groups') }}</h2>
-            <ul class="featured-groups row"> 
+            <ul class="featured-groups row">
             {% for group in h.get_featured_groups(count=10) %}
               {% snippet "home/snippets/group_item.html", group=group, position=loop.index %}
             {% endfor %}
             </ul>
         </section>
-        
+
         <div class="row">
             <section class="span6">
                 <h2>{{ _('Latest Datasets') }}</h2>
-                TODO: Most recently updated datasets
+                {% snippet 'home/snippets/recently_updated_datasets.html' %}
             </section>
 
             <section class="span6">

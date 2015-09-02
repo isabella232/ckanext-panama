@@ -22,11 +22,15 @@ Requirements
 
 * ckanext-scheming: https://github.com/open-data/ckanext-scheming
 * ckanext-fluent: https://github.com/open-data/ckanext-fluent
+* ckanext-disqus: https://github.com/ckan/ckanext-disqus
+* ckanext-widgets: https://github.com/ckan/ckanext-widgets
+* ckanext-pages: https://github.com/ckan/ckanext-pages
 
 Add these to the `ckan.plugins` setting in order::
 
-  ckan.plugins = ... panama fluent scheming_datasets
+  ckan.plugins = ... panama fluent scheming_datasets disqus pages widgets
 
+Configuration settings for these extensions are detailed below.
 
 ------------
 Installation
@@ -59,11 +63,22 @@ To install ckanext-panama:
 Config Settings
 ---------------
 
-Document any optional config settings here. For example::
+Several of the CKAN extension require configuration settings.
 
-    # The minimum number of hours to wait before re-checking a resource
-    # (optional, default: 24).
-    ckanext.panama.some_setting = some_default_value
+ckanext-pages should use the ckeditor::
+
+  ckanext.pages.editor = ckeditor
+
+ckanext-disqus needs the account name::
+
+  disqus.name = <disqus account name>
+
+ckanext-scheming and ckanext-fluent need schema and presets specified::
+
+  scheming.dataset_schemas = ckanext.panama:fluent_panama.json
+
+  scheming.presets = ckanext.scheming:presets.json
+                     ckanext.fluent:presets.json
 
 
 ------------------------
