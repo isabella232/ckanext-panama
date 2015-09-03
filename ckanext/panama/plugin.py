@@ -67,7 +67,6 @@ class PanamaPlugin(plugins.SingletonPlugin):
 
     def before_index(self, pkg_dict):
         pkg_dict = self._fluent_to_core_fields(pkg_dict)
-        log.info(pkg_dict)
         return pkg_dict
 
     def before_view(self, pkg_dict):
