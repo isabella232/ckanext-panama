@@ -79,6 +79,8 @@ setup(
     entry_points='''
         [ckan.plugins]
         panama=ckanext.panama.plugin:PanamaPlugin
+        panama_groups=ckanext.panama.plugin:PanamaGroupPlugin
+        panama_scheming_groups=ckanext.panama.plugin:PanamaSchemingGroupsPlugin
 
         [paste.paster_command]
         create_featured_groups=ckanext.panama.commands:CreateFeaturedGroups

@@ -28,7 +28,7 @@ Requirements
 
 Add these to the `ckan.plugins` setting in order::
 
-  ckan.plugins = ... panama fluent scheming_datasets disqus pages widgets
+  ckan.plugins = ... panama panama_groups fluent scheming_datasets panama_scheming_groups disqus pages widgets
 
 Configuration settings for these extensions are detailed below.
 
