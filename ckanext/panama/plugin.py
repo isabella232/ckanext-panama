@@ -2,7 +2,8 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.lib.helpers as lib_helpers
 
-from ckanext.scheming.plugins import SchemingGroupsPlugin
+from ckanext.scheming.plugins import (SchemingGroupsPlugin,
+                                      SchemingOrganizationsPlugin)
 
 import ckanext.panama.helpers as panama_helpers
 
@@ -97,7 +98,33 @@ class PanamaGroupPlugin(plugins.SingletonPlugin):
         return grp_dict
 
 
+class PanamaOrganizationPlugin(plugins.SingletonPlugin):
+
+    '''Ensure grp_dict['display_name'] is using the correct language.'''
+
+    plugins.implements(plugins.IOrganizationController, inherit=True)
+
+    # mapping between fluent field and core field
+    fluent_core_field_map = [('fluent_title', 'display_name'),
+                             ('fluent_description', 'description')]
+
+    def before_view(self, grp_dict):
+        grp = toolkit.get_action('organization_show')(
+            data_dict={'id': grp_dict['id']})
+        grp = _fluent_to_core_fields(grp, self.fluent_core_field_map)
+        grp_dict['display_name'] = grp['display_name']
+        grp_dict['description'] = grp['description']
+
+        return grp_dict
+
+
 class PanamaSchemingGroupsPlugin(SchemingGroupsPlugin):
 
     def about_template(self):
         return 'group/about.html'
+
+
+class PanamaSchemingOrganizationsPlugin(SchemingOrganizationsPlugin):
+
+    def about_template(self):
+        return 'organization/about.html'

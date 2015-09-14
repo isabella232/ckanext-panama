@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from ckan.common import OrderedDict
 from pylons import config
 from ckan.plugins import toolkit
@@ -5,16 +7,16 @@ import ckanapi
 
 
 groups = OrderedDict([
-    ('local-governments', 'Local Governments'),
-    ('health', 'Health'),
-    ('business', 'Business'),
-    ('transportation', 'Transportation'),
-    ('education', 'Education'),
-    ('justice', 'Justice'),
-    ('social-development', 'Social Development'),
-    ('finance', 'Finance'),
-    ('labour', 'Labour'),
-    ('environment', 'Environment'),
+    ('local-governments', ('Local Governments', 'Municipios')),
+    ('health', ('Health', 'Salud')),
+    ('business', ('Business', 'Comercio e Industrias')),
+    ('transportation', ('Transportation', 'Transporte y Logística')),
+    ('education', ('Education', 'Educación')),
+    ('justice', ('Justice', 'Justicia')),
+    ('social-development', ('Social Development', 'Desarrollo Social')),
+    ('finance', ('Finance', 'Finanzas Publicas')),
+    ('labour', ('Labour', 'Empleo')),
+    ('environment', ('Environment', 'Ambiente')),
 ])
 
 
@@ -36,11 +38,12 @@ class CreateFeaturedGroups(toolkit.CkanCommand):
         url = config['ckan.site_url']
         local_ckan = ckanapi.LocalCKAN()
 
+        print groups.items
+
         for name, title in groups.items():
             try:
                 result = local_ckan.action.group_create(
                     name=name,
-                    title=title,
                     image_url='{url}/images/{image}.png'.format(url=url,
                                                                 image=name)
                 )

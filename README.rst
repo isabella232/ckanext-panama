@@ -28,7 +28,7 @@ Requirements
 
 Add these to the `ckan.plugins` setting in order::
 
-  ckan.plugins = ... panama panama_groups fluent scheming_datasets panama_scheming_groups disqus pages widgets
+  ckan.plugins = ... panama panama_groups panama_organizations fluent scheming_datasets panama_scheming_groups panama_scheming_organizations disqus pages widgets
 
 Configuration settings for these extensions are detailed below.
 
@@ -75,7 +75,9 @@ ckanext-disqus needs the account name::
 
 ckanext-scheming and ckanext-fluent need schema and presets specified::
 
-  scheming.dataset_schemas = ckanext.panama:fluent_panama.json
+  scheming.dataset_schemas = ckanext.panama:fluent_dataset_panama.json
+  scheming.group_schemas = ckanext.panama:fluent_group_panama.json
+  scheming.organization_schemas = ckanext.panama:fluent_organization_panama.json
 
   scheming.presets = ckanext.scheming:presets.json
                      ckanext.fluent:presets.json
