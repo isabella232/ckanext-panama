@@ -1,6 +1,13 @@
 {% import 'macros/form.html' as form %}
 
 {%- for lang in h.fluent_form_languages(schema, field) -%}
+
+  {% set attribs = field.form_attrs if 'form_attrs' in field else {} %}
+
+  {% if loop.first %}
+    {% set attribs = field.first_form_attrs if 'first_form_attrs' in field else attribs %}
+  {% endif %}
+
   {{ form.input(
     field.field_name + '-' + lang,
     id='field-' + field.field_name + '-' + lang,
@@ -10,7 +17,7 @@
         or data[field.field_name + '-' + lang],
     error=errors[field.field_name + '-' + lang],
     classes=['control-full', 'control-large'],
-    attrs=field.form_attrs if 'form_attrs' in field else {},
+    attrs=attribs,
     is_required=h.scheming_field_required(field)
     )  }}
 {%- endfor -%}
