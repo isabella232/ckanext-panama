@@ -9,7 +9,10 @@
       "preset": "fluent_text",
       "form_placeholder": "eg. Yellow Submarine",
       "display_snippet": "panama_fluent_text.html",
-      "form_snippet": "panama_fluent_text.html"
+      "form_snippet": "panama_fluent_text.html",
+      "form_attrs": {
+          "data-module": "slug-preview-target"
+      }
     },
     {
       "field_name": "name",
