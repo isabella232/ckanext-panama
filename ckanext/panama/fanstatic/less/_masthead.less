@@ -9,7 +9,7 @@
         .full-width;
         
         .logo {
-            height: 100px;
+            height: 99px;
             line-height: 100px;
             display: block;
             width: 200px;
@@ -104,6 +104,18 @@
                 .nav-pills li a:hover,
                 .nav-pills li.active a {
                     background-color: transparent;
+                }
+                
+                .nav-pills > li > a { 
+                    margin-top: 0px;
+                    margin-bottom: 1px;
+                    padding: 10px 15px 9px;
+                }
+                .nav > li > a, .masthead .nav > li > a:focus,
+                .nav > li > a:hover, .masthead .nav > .active > a,
+                .nav > .active > a:hover
+                .nav > .active > a:focus {
+                    font-weight: bold;
                 }
             }
         }
