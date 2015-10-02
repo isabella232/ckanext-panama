@@ -27,13 +27,13 @@
                 <ul class="latest-posts">
                   {% for post in posts %}
                   <li class="well">
-                  <span class="post">
-                      <small class="date"> {{ h.render_datetime(post.publish_date) }} </small>
-                    <h4><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a></h4>
+                      <span class="post">         
+                        <h4><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a></h4>
 
-                    <span class="text">{{ h.markdown_extract(post.content) }}</span>
-                    <a class="more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{% trans %}More{% endtrans %} »</a>
-                  </span>
+                        <span class="text">{{ h.markdown_extract(post.content) }}</span>
+                        <a class="more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{% trans %}More{% endtrans %} »</a>
+                      </span>
+                      <span class="date label"> {{ h.render_datetime(post.publish_date) }} </span>
                   </li>
                   {% endfor %}
                 </ul>
