@@ -65,32 +65,20 @@
             }
         }
     }
-    .latest-datasets {
-        
-        dl {
-            margin: 0;
-            
-            dt {
-                font-size: 16px;
-                margin: 15px 0 2px 0;
-            }
-            
-            dd {
-                margin: 0 0 10px 0;
-            }
-        }
-    }
-    
-    
+    .latest-datasets,
     .latest-posts {
         margin: 15px 0 10px 0;
         
-        li {
+        & > li {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            
+            .post {
+                display: block;
+            }
             
             .date {
-                color: @darkgrey;
+                margin-top: 10px;
             }
             
             h4 {
@@ -99,8 +87,12 @@
                 font-size: 16px;
             }
             
-            .text {
-                display: block;
+            .formats {
+                margin: 10px 0 0 0;
+            }
+            
+            .label {
+                opacity: 0.6;
             }
         }
     }
