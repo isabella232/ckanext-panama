@@ -44,6 +44,7 @@ class CreateFeaturedGroups(toolkit.CkanCommand):
             try:
                 result = local_ckan.action.group_create(
                     name=name,
+                    display_name=title,
                     image_url='{url}/images/{image}.png'.format(url=url,
                                                                 image=name)
                 )
