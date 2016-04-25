@@ -1,24 +1,61 @@
 {% ckan_extends %}
 
-{% block header_site_navigation %}
-
-{% set current_url = request.environ.CKAN_CURRENT_URL %}
-{% set current_lang = request.environ.CKAN_LANG %}
-
-<ul class="languages">
-{% for locale in h.get_available_locales() %}
-    <li {% if locale == current_lang %}class="active"{% endif %}><a href="{% url_for current_url, locale=locale %}">{% filter upper %}{{ locale }}{% endfilter %}</a></li>
-{% endfor %}
-</ul>
-
-<nav class="section navigation">
-    <ul class="nav nav-pills">
-    {% block header_site_navigation_tabs %}
+{% block header_wrapper %}
+    {% block header_account %}
         {{ super() }}
     {% endblock %}
-    <li class="contact">
-        {{ _('Get in touch') }}: <a href="https://www.facebook.com/InnovacionPma" target="_blank"><i class="icon-facebook"></i> Facebook</a> <a href="https://twitter.com/innovacionpma" target="_blank"><i class="icon-twitter"></i> Twitter</a>
-    </li>
-    </ul>
-</nav>
+    <header class="navbar navbar-static-top masthead">
+        {% block header_debug %}
+            {% if g.debug and not g.debug_supress_header %}
+                <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
+            {% endif %}
+        {% endblock %}
+
+        <div class="container">
+            <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="logoandnav">
+
+                <hgroup class="{{ g.header_class }} pull-left">
+
+                    {% block header_logo %}
+                        {{ super() }}
+                    {% endblock %}
+
+                </hgroup>
+                    <div class="nav-collapse collapse" id="mainnav">
+
+                        {% block header_site_navigation %}
+
+                            <div class="nav-collapse collapse">
+                                <nav class="section navigation">
+                                    <ul class="nav nav-pills">
+                                        {{ h.build_nav_main(
+                                            ('search', _('DATOS')),
+                                            ('group_index', _('TEMÁTICAS')),
+                                            ('organizations_index', _('APPS')),
+                                            ('about', _('CONTÁCTENOS')),
+                                            ('about', _('ACERCA DE'))
+                                            ) }}
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        {% endblock %}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panamaheader">
+            <div class="container headersearch">
+                {% block header_site_search %}
+                    {{ super() }}
+                {% endblock %}
+            </div>
+        </div>
+    </header>
 {% endblock %}

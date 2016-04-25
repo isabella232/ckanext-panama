@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,300);
+
+html {
+    background: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.container2 {
+    width: 1100px;
+}
+
+.masthead2 .container {
+    width: 1100px;
+}
+
+[role="main"], .main {
+    background: #ffffff;
+    background-color: #ffffff;
+}
+
+.hero {
+    background: #ffffff;
+}
+
+.wrapper {
+    border: none;
+    box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2d3f53;
+}
+
+.media-grid {
+    border: none;
+    background: #ffffff;
+}
+
+.module-heading {
+    border-top: none;
+    border-bottom-color: #3e6086;
+    border-bottom-width: 3px;
+    background: #ffffff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+    text-decoration: underline;
+}
+
+.breadcrumb li.home {
+    display: none;
+}
+
+.module-heading i {
+    display: none;
+}
+
+.module-footer,
+.nav-simple > li, .nav-aside > li {
+    border: none;
+}
+
+header,
+.page-header {
+    background: none;
+}
+
+.headersearch {
+    height: 100%;
+}
+
+.panamaheader .site-search input {
+    width: 800px;
+    height: 35px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.masthead .site-search {
+    position: absolute;
+    bottom: 22px;
+    left: 50px;
+}
+
+.account-masthead {
+    background: #ffffff;
+}
+
+.account-masthead .account ul li a {
+    color: black;
+}
+
+.masthead {
+    background: #ffffff;
+    background-image: none;
+}
+
+.masthead .navigation .nav-pills li.active a,
+.masthead .navigation .nav-pills li a:hover {
+    background: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.panamaheader {
+    height: 140px;
+    background: url("/header.jpg");
+    background-position: 50% 0;
+}
+
+.delimiter {
+    height: 4px;
+    background: url("/delimiter.png");
+    background-position: 50% 0;
+}
+
+.separator {
+    height: 12px;
+    background: rgba(249, 249, 249, 1);
+    background: -moz-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249, 249, 249, 1)), color-stop(40%, rgba(98, 137, 182, 1)), color-stop(60%, rgba(98, 137, 182, 1)), color-stop(100%, rgba(249, 249, 249, 1)));
+    background: -webkit-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -o-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: linear-gradient(to right, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f9f9f9', GradientType=1);
+}
+
+#logoandnav {
+    background-color: #ffffff;
+}
+
+#mainnav {
+    margin-top: -60px;
+}
+
+#mainnav a {
+    color: #000;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.homepage {
+    background: #ffffff;
+    background-color: #ffffff;
+}
+
+.account-masthead .account ul li {
+    font-style: italic;
+    border: 0px;
+}
+
+.site-footer {
+    background: rgba(249, 249, 249, 1);
+    background: -moz-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249, 249, 249, 1)), color-stop(50%, rgba(208, 208, 208, 1)), color-stop(100%, rgba(249, 249, 249, 1)));
+    background: -webkit-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);
+    background: -o-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);
+    background: linear-gradient(to right, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f9f9f9', GradientType=1);
+}
+
+.site-footer img {
+    margin-top: 30px;
+    width: 150px;
+}
+
+.legal {
+    color: darkgray;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}

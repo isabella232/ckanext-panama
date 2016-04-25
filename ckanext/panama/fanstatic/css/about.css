@@ -1,0 +1,12 @@
+.wrapper {
+    border: none;
+    box-shadow: none;
+}
+
+.indented {
+    margin-left: 5em;
+}
+
+p {
+    margin-top: 3em;
+}
