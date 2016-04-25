@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,600italic);
 
 html {
     background: #ffffff;
@@ -27,13 +27,45 @@ body {
     background: #ffffff;
 }
 
+.search-giant {
+    display: none;
+}
+
+.search-form .control-order-by {
+    margin-top: -3px;
+}
+
 .wrapper {
     border: none;
     box-shadow: none;
+    background: none;
 }
-
+.search-form h2,
+.toolbar .breadcrumb a,
 h1, h2, h3, h4, h5, h6 {
     color: #2d3f53;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.search-form h2 {
+    font-style: italic;
+    margin-top: 0px;
+}
+
+.search-form h2 {
+    font-size: 20px;
+}
+
+#dataset-search-form {
+    padding-bottom: 0px;
+    border-bottom-color: #3e6086;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+.dataset-content {
+    font-weight: 200;
 }
 
 .media-grid {
@@ -46,6 +78,30 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-color: #3e6086;
     border-bottom-width: 3px;
     background: #ffffff;
+}
+
+.context-info .nums {
+    border-top-color: #3e6086;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+.context-info .module-content {
+    padding: 15px 0px 15px 0px;
+}
+
+.primary .module > .module-content {
+    padding-top: 0px;
+}
+
+.search-form .filter-list {
+    margin-top: 7px;
+}
+
+.context-info .follow_button,
+.context-info .nums,
+.context-info h1.heading {
+    padding-left: 15px;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -112,6 +168,7 @@ header,
     height: 140px;
     background: url("/header.jpg");
     background-position: 50% 0;
+    margin-bottom: 10px;
 }
 
 .delimiter {

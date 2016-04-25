@@ -1,0 +1,40 @@
+#contact-form {
+    background-color: aliceblue;
+}
+
+.info {
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.form-actions {
+    border: none;
+}
+
+#contact-info {
+    margin-left: 0px;
+    font-size: 13px;
+}
+
+#content {
+    padding-bottom: 40px;
+}
+
+.form-horizontal textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+.form-horizontal input {
+    width: 95%;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+fieldset {
+    padding: 15px 15px 15px 15px;
+}

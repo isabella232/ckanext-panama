@@ -1,6 +1,8 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.lib.helpers as lib_helpers
+import routes.mapper
+import ckan.lib.base as base
 
 from ckanext.scheming.plugins import (SchemingGroupsPlugin,
                                       SchemingOrganizationsPlugin)
@@ -42,6 +44,7 @@ class PanamaPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IRoutes, inherit=True)
 
     # mapping between fluent field and core field
     fluent_core_field_map = [('fluent_title', 'title'),
@@ -76,6 +79,18 @@ class PanamaPlugin(plugins.SingletonPlugin):
 
     def after_show(self, context, pkg_dict):
         return _fluent_to_core_fields(pkg_dict, self.fluent_core_field_map)
+
+    def before_map(self, route_map):
+        with routes.mapper.SubMapper(route_map,
+                                     controller='ckanext.panama.plugin:PanamaController') as m:
+            m.connect('contact', '/contact', action='contact')
+        return route_map
+
+
+class PanamaController(base.BaseController):
+
+    def contact(self):
+        return base.render('home/contact.html')
 
 
 class PanamaGroupPlugin(plugins.SingletonPlugin):
