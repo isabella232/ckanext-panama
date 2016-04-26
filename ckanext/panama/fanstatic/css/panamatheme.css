@@ -233,5 +233,10 @@ header,
     color: darkgray;
     margin-top: 30px;
     margin-bottom: 0px;
+    margin-left: 0px;
     padding-bottom: 5px;
+}
+
+.footer-img {
+    margin-left: 0px;
 }

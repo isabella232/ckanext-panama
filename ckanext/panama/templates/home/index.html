@@ -7,7 +7,7 @@
             {{ self.flash() }}
 
             <div class="maincat-group">
-                <h2>{{ _('Categories') }}</h2>
+                <h2>{{ _('Temáticas') }}</h2>
                 <div class="row">
                     <ul class="responsive-grid">
                         {% for group in h.get_featured_groups(count=12) %}
@@ -22,13 +22,14 @@
         <div class="separator"></div>
         <div class="container">
             <section class="span5">
-                <h2>{{ _('Latest Datasets') }}</h2>
+                <h2>{{ _('Datos Recientes') }}</h2>
                 {% snippet 'home/snippets/recently_updated_datasets.html' %}
             </section>
 
             <section class="span5">
                 <h2>{{ _('Etiquetas') }}</h2>
-            {% set tags = h.get_facet_items_dict('tags', limit=20) %}
+                    {% set tags = h.get_facet_items_dict('tags', limit=20) %}
+                    {{ tags }}
                     {% set posts = h.get_recent_blog_posts(3) %}
                     <ul class="latest-posts">
                         {% for post in posts %}
