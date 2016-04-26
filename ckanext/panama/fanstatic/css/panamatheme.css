@@ -221,6 +221,13 @@ header,
     border: 0px;
 }
 
+.indexh {
+    padding-top: 10px;
+    border-bottom-color: #3e6086;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
 .site-footer {
     background: rgba(249, 249, 249, 1);
     background: -moz-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(208, 208, 208, 1) 50%, rgba(249, 249, 249, 1) 100%);

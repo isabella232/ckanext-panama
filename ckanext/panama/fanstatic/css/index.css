@@ -29,7 +29,7 @@
 /* General grid styles */
 .responsive-grid {
     list-style: none;
-    padding: 0 0 0 0;
+    padding: 0px 30px 0 30px;
     margin: 0;
 }
 
