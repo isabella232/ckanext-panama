@@ -28,6 +28,7 @@
 
             <section class="span5">
                 <h2>{{ _('Etiquetas') }}</h2>
+            {% set tags = h.get_facet_items_dict('tags', limit=20) %}
                     {% set posts = h.get_recent_blog_posts(3) %}
                     <ul class="latest-posts">
                         {% for post in posts %}

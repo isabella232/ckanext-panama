@@ -1,5 +1,25 @@
 #contact-form {
-    background-color: aliceblue;
+    background-image: url('/submitbackground.png');
+    background-position: 50% 0;
+    width: 650px;
+}
+
+label {
+    display: none;
+}
+
+.form-horizontal input {
+    padding-left: 15px !important;
+    font-size: 15px;
+}
+
+.form-horizontal textarea {
+    padding-left: 15px !important;
+    padding-top: 5px !important;
+}
+
+.form-horizontal .controls {
+    margin-left: 0px;
 }
 
 .info {
@@ -12,6 +32,10 @@
 
 .form-actions {
     border: none;
+}
+
+.editor .editor-info-block {
+    display: none;
 }
 
 #contact-info {
@@ -37,4 +61,14 @@
 
 fieldset {
     padding: 15px 15px 15px 15px;
+}
+
+#submit {
+    margin: 37px 0px 0px 20px;
+    padding: 0px;
+    border: none;
+}
+
+#submit > img {
+    width: 100%;
 }

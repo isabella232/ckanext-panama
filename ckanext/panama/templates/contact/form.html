@@ -14,25 +14,25 @@
             </div>
             <div class="row">
                 <div id="contact-form" class="span9">
-                    <form class="dataset-form form-horizontal" method="post">
+                    <form id="form-id" class="dataset-form form-horizontal" method="post">
                         {{ form.errors(error_summary) }}
 
                         <fieldset>
                             <div class="row">
                                 <div class="span4">
-                                    <input placeholder="* Título"/>
+                                    {{ form.input('name', label=_('Contact Name'), id='field-name', value=data.name, error=errors.name, placeholder=_('* Título'), classes=['control-large'], is_required=true) }}
                                 </div>
                                 <div class="span4">
-                                    <input placeholder="* Su Correo Eletrónico"/>
+                                    {{ form.input('email', label=_('Email'), id='field-email', type='email', value=data.email, error=errors.email, placeholder=_('* Su Correo Eletrónico'), classes=['control-large'], is_required=true) }}
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="span4">
-                                    <textarea placeholder="* En qué lo podemos ayudar?" rows="8"></textarea>
+                                    {{ form.markdown('content', label=_('Your Request'), id='field-content', value=data.content, error=errors.content, placeholder=_('* En qué lo podemos ayudar?'), is_required=true) }}
                                 </div>
                                 <div class="span4">
-                                    <input placeholder="* Razón"/>
+                                    {{ form.input('razon', label=_('Email'), id='razon', value=data.email, error=errors.email, placeholder=_('* Razón'), classes=['control-large'], is_required=true) }}
                                 </div>
                             </div>
                             {% if g.recaptcha_publickey %}
@@ -51,7 +51,7 @@
                         <li>Report un problema con un dataset</li>
                     </ul>
                     <div class="form-actions">
-                        <button id="submit" class="btn btn-primary" type="submit" name="save">
+                        <button id="submit" class="btn btn-primary save" type="submit" name="save" form="form-id">
                             <img src="/images/submit.png">
                         </button>
                     </div>

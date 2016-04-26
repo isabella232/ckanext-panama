@@ -80,17 +80,6 @@ class PanamaPlugin(plugins.SingletonPlugin):
     def after_show(self, context, pkg_dict):
         return _fluent_to_core_fields(pkg_dict, self.fluent_core_field_map)
 
-    def before_map(self, route_map):
-        with routes.mapper.SubMapper(route_map,
-                                     controller='ckanext.panama.plugin:PanamaController') as m:
-            m.connect('contact', '/contact', action='contact')
-        return route_map
-
-
-class PanamaController(base.BaseController):
-
-    def contact(self):
-        return base.render('home/contact.html')
 
 
 class PanamaGroupPlugin(plugins.SingletonPlugin):

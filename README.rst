@@ -26,10 +26,11 @@ Requirements
 * ckanext-widgets: https://github.com/ckan/ckanext-widgets
 * ckanext-pages: https://github.com/ckan/ckanext-pages
 * ckanext-showcase: https://github.com/ckan/ckanext-showcase
+* ckanext-contact: https://github.com/NaturalHistoryMuseum/ckanext-contact
 
 Add these to the `ckan.plugins` setting in order::
 
-  ckan.plugins = ... panama panama_groups panama_organizations fluent scheming_datasets panama_scheming_groups panama_scheming_organizations disqus pages widgets showcase
+  ckan.plugins = ... panama panama_groups panama_organizations fluent scheming_datasets panama_scheming_groups panama_scheming_organizations disqus pages widgets showcase contact
 
 Configuration settings for these extensions are detailed below.
 
