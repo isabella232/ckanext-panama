@@ -1,0 +1,56 @@
+{% ckan_extends %}
+
+{% set truncate = truncate or 180 %}
+{% set truncate_title = truncate_title or 80 %}
+{% set title = package.title or package.name %}
+{% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
+
+{% block package_item %}
+
+    <li class="media-item">
+        {% block item_inner %}
+            <div class="row">
+                <div class="span6">
+                    {% block title %}
+                        {{ super() }}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="span2">
+                    {% block image %}
+                        <img src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
+                             alt="{{ package.name }}" class="media-image">
+                    {% endblock %}
+                </div>
+                <div class="span7">
+                    {% block notes %}
+                        {% if notes %}
+                            <div>{{ notes|urlize }}</div>
+                        {% else %}
+                            <p class="empty">{{ _("This showcase has no description") }}</p>
+                        {% endif %}
+                    {% endblock %}
+                    {% block datasets %}
+                    {% endblock %}
+                    {% block link %}
+                        <a href="{{ h.url_for(controller='ckanext.showcase.controller:ShowcaseController', action='read', id=package.name) }}"
+                           title="{{ _('View {showcase_title}').format(showcase_title=package.title) }}"
+                           class="media-view">
+                            <span>{{ _('View {showcase_title}').format(showcase_title=package.title) }}</span>
+                        </a>
+                    {% endblock %}
+                    {% if show_remove %}
+                        <form method="post"><input type="hidden" value="{{ package.id }}"
+                                                   name="remove_showcase_id"/><input
+                                value="{{ _('Remove') }}" type="submit" class="btn btn-danger btn-small media-edit"
+                                title="{{ _('Remove dataset from this showcase') }}"/></form>
+                    {% endif %}
+                </div>
+            </div>
+        {% endblock %}
+    </li>
+{% endblock %}
+{# {% if position is divisibleby 3 %}
+  <li class="clearfix js-hide"></li>
+{% endif %} #}

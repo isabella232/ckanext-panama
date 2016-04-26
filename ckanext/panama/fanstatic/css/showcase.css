@@ -1,0 +1,49 @@
+[role="main"] .primary {
+    float: left;
+}
+
+#showcase-list > li {
+    display: block;
+}
+
+.media-item {
+    display: block;
+    width: 100%;
+    position: relative;
+    float: left;
+    padding: 15px;
+    margin: 15px 0 0 15px;
+    background-color: white;
+    border: none;
+}
+
+.media-image {
+    max-width: 150px;
+}
+
+.media-heading a {
+    font-style: normal;
+    font-weight: 200;
+    color: black;
+}
+
+.media-item {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.media-view {
+    border: none;
+}
+
+.media-view:hover,
+.media-view.hovered {
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 65, 122, 0.3);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 65, 122, 0.3);
+  box-shadow: 0 0 0 4px rgba(0, 65, 122, 0.3);
+}
+
+.media-view:hover .banner,
+.media-view.hovered .banner {
+  background-color: #005d7a;
+}
