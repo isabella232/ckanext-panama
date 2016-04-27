@@ -30,7 +30,7 @@
             <section class="span5">
                 <h2 class="indexh">{{ _('Etiquetas') }}</h2>
                 <div id="tagcloud" data-module="tagmodule">
-                    {% set tags = h.get_facet_items_dict('tags', limit=30) %}
+                    {% set tags = h.get_facet_items_dict('tags', limit=20) %}
                     {% for tag in tags %}
                         <a href="/dataset?tags={{ tag.name }}" rel="{{ tag.count }}">{{ tag.display_name }}</a>
                     {% endfor %}
