@@ -265,3 +265,8 @@ header,
 .footer-img {
     margin-left: 0px;
 }
+
+.dataset-resources li a {
+    background-color: #ffffff;
+    margin-right: 10px;
+}
