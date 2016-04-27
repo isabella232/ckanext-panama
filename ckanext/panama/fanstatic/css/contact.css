@@ -1,7 +1,7 @@
 #contact-form {
     background-image: url('/submitbackground.png');
     background-position: 50% 0;
-    width: 650px;
+    height: 330px;
 }
 
 label {
@@ -64,11 +64,32 @@ fieldset {
 }
 
 #submit {
-    margin: 37px 0px 0px 20px;
     padding: 0px;
     border: none;
 }
 
+@media (min-width: 1200px) {
+    #submit {
+        margin: 106px 0px 0px 20px;
+    }
+}
+
+@media (min-width: 976px) and (max-width: 1200px) {
+    #submit {
+        margin: 83px 0px 0px 20px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 985px) {
+    #submit {
+        margin: 55px 0px 0px 20px;
+    }
+}
+
 #submit > img {
     width: 100%;
+}
+
+#contact-form form {
+    padding: 20px;
 }

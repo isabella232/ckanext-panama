@@ -40,6 +40,7 @@ body {
     box-shadow: none;
     background: none;
 }
+
 .search-form h2,
 .toolbar .breadcrumb a,
 h1, h2, h3, h4, h5, h6 {
@@ -154,8 +155,12 @@ header,
 
 .masthead .site-search {
     position: absolute;
-    bottom: 22px;
+    bottom: 20px;
     left: 50px;
+}
+
+.masthead .navigation {
+    margin-right: 0px;
 }
 
 .account-masthead {
@@ -269,4 +274,71 @@ header,
 .dataset-resources li a {
     background-color: #ffffff;
     margin-right: 10px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+
+    .span12 {
+        width: 1152px;
+    }
+
+    .span11 {
+        width: 1054px;
+    }
+
+    .span10 {
+        width: 960px;
+    }
+
+    .span9 {
+        width: 864px;
+    }
+
+    .span8 {
+        width: 768px;
+    }
+
+    .span7 {
+        width: 672px;
+    }
+
+    .span6 {
+        width: 576px;
+    }
+
+    .span5 {
+        width: 480px;
+    }
+
+    .span4 {
+        width: 384px;
+    }
+
+    .span3 {
+        width: 288px;
+    }
+
+    .span2 {
+        width: 192px;
+    }
+
+    .span1 {
+        width: 96px;
+    }
+
+    .masthead .container {
+        width: 1200px;
+    }
+
+    #mainnav {
+        margin-top: 70px;
+    }
+
+    .masthead .site-search {
+        left: 130px;
+    }
+
 }
