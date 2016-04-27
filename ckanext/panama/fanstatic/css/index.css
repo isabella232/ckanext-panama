@@ -83,6 +83,18 @@
     color: #151515;
 }
 
+#tagcloud > a {
+    padding: 20px;
+}
+
+#tagcloud {
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .well {
     padding-left: 0px;
 }

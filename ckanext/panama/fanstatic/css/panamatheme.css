@@ -64,6 +64,20 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-width: 3px;
 }
 
+.dataset-map {
+    margin: 10px 0px 0px 0px;
+}
+
+.dataset-map-expanded #dataset-map {
+    width: 913px;
+    border: none;
+    top: -400px;
+}
+
+.dataset-map-expanded .wrapper {
+    margin-top: 400px;
+}
+
 .dataset-content {
     font-weight: 200;
 }
