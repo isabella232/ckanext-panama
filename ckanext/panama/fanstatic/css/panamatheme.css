@@ -10,14 +10,6 @@ body {
     background: #ffffff;
 }
 
-.container2 {
-    width: 1100px;
-}
-
-.masthead2 .container {
-    width: 1100px;
-}
-
 [role="main"], .main {
     background: #ffffff;
     background-color: #ffffff;
@@ -153,6 +145,10 @@ header,
     margin: 0 auto;
 }
 
+.masthead .container {
+    margin-bottom: 5px;
+}
+
 .masthead .site-search {
     position: absolute;
     bottom: 20px;
@@ -164,7 +160,10 @@ header,
 }
 
 .account-masthead {
-    background: #ffffff;
+    background: transparent;
+    width: 95%;
+    position: absolute;
+    z-index: 1;
 }
 
 .account-masthead .account ul li a {
@@ -181,6 +180,16 @@ header,
     background: none;
     box-shadow: none;
     text-decoration: underline;
+}
+
+.masthead .btn-navbar,
+.masthead .btn-navbar:hover,
+.masthead .btn-navbar:focus,
+.masthead .btn-navbar:active,
+.masthead .btn-navbar.active,
+.masthead .btn-navbar.disabled,
+.masthead .btn-navbar[disabled] {
+    margin-top: 40px;
 }
 
 .panamaheader {
@@ -276,6 +285,14 @@ header,
     margin-right: 10px;
 }
 
+.showcase-item {
+    float: left;
+    min-height: 1px;
+    max-width: 650px;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
 @media (min-width: 1200px) {
     .container {
         width: 1200px;
@@ -338,7 +355,7 @@ header,
     }
 
     .masthead .site-search {
-        left: 130px;
+        left: 190px;
     }
 
 }

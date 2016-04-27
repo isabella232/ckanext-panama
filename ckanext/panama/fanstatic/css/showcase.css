@@ -51,3 +51,9 @@ h3 {
 .media-view.hovered .banner {
   background-color: #005d7a;
 }
+
+@media (max-width: 768px) {
+    .media-item {
+        width: 550px;
+    }
+}
