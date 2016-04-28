@@ -5,18 +5,19 @@
 {% block content %}
     <div role="main">
         <div id="content" class="container">
-            {{ self.flash() }}
-            <h1>Contactenos</h1>
-            <div class="span5 info">
-                <p>Tiene usted alguna pregunta o desea darnos su opinión sobre
-                    <a href="http://datosabiertos.gob.pa">datosabiertos.gob.pa</a>
-                </p>
+            <div class="row">
+                {{ self.flash() }}
+                <h1>Contactenos</h1>
+                <div class="span5 info">
+                    <p>Tiene usted alguna pregunta o desea darnos su opinión sobre
+                        <a href="http://datosabiertos.gob.pa">datosabiertos.gob.pa</a>
+                    </p>
+                </div>
             </div>
             <div class="row">
+                {{ form.errors(error_summary) }}
                 <div id="contact-form" class="span9">
                     <form id="form-id" class="dataset-form form-horizontal" method="post">
-                        {{ form.errors(error_summary) }}
-
                         <fieldset>
                             <div class="row">
                                 <div class="span4">
@@ -32,7 +33,7 @@
                                     {{ form.markdown('content', label=_('Your Request'), id='field-content', value=data.content, error=errors.content, placeholder=_('* En qué lo podemos ayudar?'), is_required=true) }}
                                 </div>
                                 <div class="span4">
-                                    {{ form.input('razon', label=_('Email'), id='razon', value=data.email, error=errors.email, placeholder=_('* Razón'), classes=['control-large'], is_required=true) }}
+                                    {{ form.input('razon', label=_('Razón'), id='razon', error=errors.email, placeholder=_('* Razón'), classes=['control-large'], is_required=true) }}
                                 </div>
                             </div>
                             {% if g.recaptcha_publickey %}
@@ -51,8 +52,8 @@
                         <li>Report un problema con un dataset</li>
                     </ul>
                     <div class="form-actions">
-                        <button id="submit" class="btn btn-primary save" type="submit" name="save" formb="form-id">
-                            <img src="/images/submit.png">
+                        <button id="submit" class="btn btn-primary save" type="submit" name="save" form="form-id">
+                            <img src="/submit.png">
                         </button>
                     </div>
                 </div>
