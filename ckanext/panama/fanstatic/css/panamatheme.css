@@ -145,6 +145,10 @@ header,
     margin: 0 auto;
 }
 
+.container-account-masthead {
+    position: relative;
+}
+
 .masthead .container {
     margin-bottom: 5px;
 }
@@ -161,9 +165,11 @@ header,
 
 .account-masthead {
     background: transparent;
-    width: 95%;
     position: absolute;
+    right: 0px;
     z-index: 1;
+    margin: 0px;
+    padding: 0px;
 }
 
 .account-masthead .account ul li a {

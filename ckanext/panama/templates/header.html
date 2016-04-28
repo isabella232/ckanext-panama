@@ -1,9 +1,11 @@
 {% ckan_extends %}
 
 {% block header_wrapper %}
+    <div class="container container-account-masthead">
     {% block header_account %}
         {{ super() }}
     {% endblock %}
+    </div>
     <header class="navbar navbar-static-top masthead">
         {% block header_debug %}
             {% if g.debug and not g.debug_supress_header %}
