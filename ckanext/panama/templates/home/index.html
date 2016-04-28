@@ -22,20 +22,22 @@
         <div class="delimiter"></div>
         <div class="separator"></div>
         <div class="container">
-            <section class="span5">
+        <div class="row">
+            <div class="span6">
                 <h2 class="indexh">{{ _('Datos Recientes') }}</h2>
                 {% snippet 'home/snippets/recently_updated_datasets.html' %}
-            </section>
+            </div>
 
-            <section class="span5">
+            <div class="span6">
                 <h2 class="indexh">{{ _('Etiquetas') }}</h2>
                 <div id="tagcloud" data-module="tagmodule">
-                    {% set tags = h.get_facet_items_dict('tags', limit=20) %}
+                    {% set tags = h.get_facet_items_dict('tags', limit=30) %}
                     {% for tag in tags %}
                         <a href="/dataset?tags={{ tag.name }}" rel="{{ tag.count }}">{{ tag.display_name }}</a>
                     {% endfor %}
                 </div>
-            </section>
+            </div>
+            </div>
         </div>
     </div>
     </div>
