@@ -45,9 +45,9 @@
 }
 
 .responsive-grid li {
-	width: 16%;
-	float: left;
-	text-align: center;
+    width: 16%;
+    float: left;
+    text-align: center;
     height: 190px;
 }
 
@@ -63,7 +63,7 @@
     margin: 15px 0 10px 0
 }
 
-.homepage .latest-datasets > li{
+.homepage .latest-datasets > li {
     display: block;
     margin-bottom: 20px
 }
@@ -118,23 +118,30 @@
 }
 
 .formats li {
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+.days-modified {
+    float: right;
+    font-size: 12px;
+    margin-top: -18px;
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 62.75em) {
-	.responsive-grid li {
-		width: 33%;
-	}
+    .responsive-grid li {
+        width: 33%;
+    }
 }
 
 @media screen and (max-width: 41.6em) {
-	.responsive-grid li {
-		width: 100%;
-	}
+    .responsive-grid li {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 25em) {
-	.responsive-grid {
-		font-size: 80%;
-	}
+    .responsive-grid {
+        font-size: 80%;
+    }
 }

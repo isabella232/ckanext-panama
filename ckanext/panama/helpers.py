@@ -2,6 +2,7 @@ from pylons import config
 
 from ckan.plugins import toolkit
 from ckan.lib import search
+from datetime import date, datetime, timedelta
 
 import logging
 log = logging.getLogger(__name__)
@@ -28,7 +29,12 @@ def get_recently_updated_panama_datasets(limit=3):
     else:
         pkgs = []
         for pkg in pkg_search_results:
-            pkgs.append(toolkit.get_action('package_show')(data_dict={
+            package = toolkit.get_action('package_show')(data_dict={
                 'id': pkg['id']
-            }))
+            })
+            log.debug("-----------")
+            log.debug(package['metadata_modified'].split('T')[0])
+            modified = datetime.strptime(package['metadata_modified'].split('T')[0], '%Y-%m-%d')
+            package['days_ago_modified'] = ((datetime.now() - modified).days)
+            pkgs.append(package)
         return pkgs

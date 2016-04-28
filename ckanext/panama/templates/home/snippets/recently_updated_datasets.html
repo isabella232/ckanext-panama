@@ -1,20 +1,27 @@
 <ul class="latest-datasets">
-{% for dataset in h.get_recently_updated_panama_datasets() %}
-    <li class="well">
-        <h4><a href="{{ h.url_for('dataset_read', id=dataset.name) }}">{{ dataset.title }}</a></h4>
-        {% if dataset.notes %}
-            <span class="text">{{ h.markdown_extract(dataset.notes) }}</span>
-        {% else %}
-            <span class="text">{{ _("This dataset has no description") }}</span>
-        {% endif %}
-        {% if dataset.resources %}
-        <ul class="formats">
-        {% for resource in dataset.resources %}
-            <li class="format-label" data-format="{{ resource.format|lower }}">{{ resource.format }}</li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-    </li>
-{% endfor %}
+    {% for dataset in h.get_recently_updated_panama_datasets() %}
+        <li class="well">
+            <h4><a href="{{ h.url_for('dataset_read', id=dataset.name) }}">{{ dataset.title }}</a></h4>
+            {% if dataset.notes %}
+                <span class="text">{{ h.markdown_extract(dataset.notes) }}</span>
+            {% else %}
+                <span class="text">{{ _("This dataset has no description") }}</span>
+            {% endif %}
+            {% if dataset.resources %}
+                <ul class="formats">
+                    {% for resource in dataset.resources[:4] %}
+                        <li class="format-label" data-format="{{ resource.format|lower }}">{{ resource.format }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <ul>
+                {% if dataset.days_ago_modified == 0 %}
+                    <span class="days-modified">Hoy</span>
+                {% else %}
+                    <span class="days-modified">Hace {{ dataset.days_ago_modified }} días</span>
+                {% endif %}
+            </ul>
+        </li>
+    {% endfor %}
 </ul>
-<a href="{{ h.url_for('search') }}">View all datasets »</a>
+<a href="{{ h.url_for('search') }}">Ver todos datos »</a>
