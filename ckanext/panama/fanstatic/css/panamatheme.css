@@ -25,6 +25,7 @@ body {
 
 .search-form .control-order-by {
     margin-top: -3px;
+    float: right;
 }
 
 .wrapper {
@@ -50,11 +51,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 
-#dataset-search-form {
-    padding-bottom: 0px;
+.search-form.no-bottom-border,
+.search-form {
+    padding-bottom: 7px;
     border-bottom-color: #3e6086;
     border-bottom-style: solid;
     border-bottom-width: 3px;
+}
+
+#dataset-map {
+    padding-top: 9px;
 }
 
 .dataset-map {
@@ -62,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dataset-map-expanded #dataset-map {
-    width: 913px;
+    width: 97%;
     border: none;
     top: -400px;
 }
@@ -99,10 +105,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .primary .module > .module-content {
     padding-top: 0px;
-}
-
-.search-form .filter-list {
-    margin-top: 7px;
 }
 
 .context-info .follow_button,
@@ -151,6 +153,27 @@ header,
 
 .masthead .container {
     margin-bottom: 5px;
+}
+
+.vertical-separator {
+    padding-right: 12px;
+    background: rgba(249, 249, 249, 1);
+    background: -moz-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249, 249, 249, 1)), color-stop(40%, rgba(98, 137, 182, 1)), color-stop(60%, rgba(98, 137, 182, 1)), color-stop(100%, rgba(249, 249, 249, 1)));
+    background: -webkit-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -o-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 1) 0%, rgba(98, 137, 182, 1) 40%, rgba(98, 137, 182, 1) 60%, rgba(249, 249, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f9f9f9', GradientType=1);
+}
+
+.vertical-separator-padding {
+    padding-right: 28px;
+    background: #ffffff;
+}
+
+.module:last-child {
+    margin-bottom: 20px;
 }
 
 .masthead .site-search {
@@ -286,6 +309,10 @@ header,
     margin-left: 0px;
 }
 
+.dataset-heading {
+    font-size: 18px;
+}
+
 .dataset-resources li a {
     background-color: #ffffff;
     margin-right: 10px;
@@ -297,6 +324,33 @@ header,
     max-width: 650px;
     margin-left: 20px;
     padding-top: 15px;
+}
+
+.media-grid.masonry {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+@media (max-width: 1200px) {
+    .vertical-separator {
+        padding-right: 0px;
+    }
+
+    .vertical-separator-padding {
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .primary > .module {
+        padding-left: 0px;
+        margin-left: -20px;
+    }
+
+    .module-content {
+        padding-left: 0px !important;
+    }
+
 }
 
 @media (min-width: 1200px) {
