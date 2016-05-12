@@ -7,16 +7,18 @@ import ckanapi
 
 
 groups = OrderedDict([
-    ('local-governments', ('Local Governments', 'Municipios')),
+    ('governments', ('Local Governments', 'Gobiernos Locales')),
     ('health', ('Health', 'Salud')),
     ('business', ('Business', 'Comercio e Industrias')),
     ('transportation', ('Transportation', 'Transporte y Logística')),
     ('education', ('Education', 'Educación')),
     ('justice', ('Justice', 'Justicia')),
     ('social-development', ('Social Development', 'Desarrollo Social')),
-    ('finance', ('Finance', 'Finanzas Publicas')),
-    ('labour', ('Labour', 'Empleo')),
     ('environment', ('Environment', 'Ambiente')),
+    ('agricultural', ('Agriculture and Fisheries','Agropecuario y Pesca')),
+    ('territory', ('Ordenamiento Territorial', 'Land Use')),
+    ('security', ('Orden Publico y Seguridad', 'Public Order and Security')),
+    ('tourism', ('Turismo', 'Tourism'))
 ])
 
 
