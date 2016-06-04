@@ -251,7 +251,7 @@ header,
 }
 
 #mainnav {
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 #mainnav a {
@@ -408,10 +408,6 @@ header,
 
     .masthead .container {
         width: 1200px;
-    }
-
-    #mainnav {
-        margin-top: 70px;
     }
 
     .masthead .site-search {
