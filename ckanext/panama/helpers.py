@@ -32,8 +32,6 @@ def get_recently_updated_panama_datasets(limit=3):
             package = toolkit.get_action('package_show')(data_dict={
                 'id': pkg['id']
             })
-            log.debug("-----------")
-            log.debug(package['metadata_modified'].split('T')[0])
             modified = datetime.strptime(package['metadata_modified'].split('T')[0], '%Y-%m-%d')
             package['days_ago_modified'] = ((datetime.now() - modified).days)
             pkgs.append(package)
