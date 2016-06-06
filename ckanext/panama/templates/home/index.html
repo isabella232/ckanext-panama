@@ -8,7 +8,7 @@
             {{ self.flash() }}
 
             <div class="maincat-group">
-                <h2>{{ _('Temáticas') }}</h2>
+                <h2>{{ _('Groups') }}</h2>
                 <div class="row">
                     <ul class="responsive-grid">
                         {% for group in h.get_featured_groups(count=12) %}
@@ -24,12 +24,12 @@
         <div class="container">
         <div class="row">
             <div class="span6">
-                <h2 class="indexh">{{ _('Datos Recientes') }}</h2>
+                <h2 class="indexh">{{_('Recent Datasets')}}</h2>
                 {% snippet 'home/snippets/recently_updated_datasets.html' %}
             </div>
 
             <div class="span6">
-                <h2 class="indexh">{{ _('Etiquetas') }}</h2>
+                <h2 class="indexh">{{ _('Tags') }}</h2>
                 <div id="tagcloud" data-module="tagmodule">
                     {% set tags = h.get_facet_items_dict('tags', limit=30) %}
                     {% for tag in tags %}
@@ -39,6 +39,5 @@
             </div>
             </div>
         </div>
-    </div>
     </div>
 {% endblock %}

@@ -1,8 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckan.lib.helpers as lib_helpers
-import routes.mapper
-import ckan.lib.base as base
+from ckan.lib.plugins import DefaultTranslation
 
 from ckanext.scheming.plugins import (SchemingGroupsPlugin,
                                       SchemingOrganizationsPlugin)
@@ -40,11 +39,13 @@ def _fluent_to_core_fields(dic, fluent_core_field_map):
     return dic
 
 
-class PanamaPlugin(plugins.SingletonPlugin):
+class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
+    plugins.implements(plugins.ITranslation)
+
 
     # mapping between fluent field and core field
     fluent_core_field_map = [('fluent_title', 'title'),

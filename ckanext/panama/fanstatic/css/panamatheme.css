@@ -251,7 +251,11 @@ header,
 }
 
 #mainnav {
-    margin-top: -50px;
+    margin-top: 75px;
+}
+
+.navbar .nav > li > a {
+    padding-right: 12px;
 }
 
 #mainnav a {

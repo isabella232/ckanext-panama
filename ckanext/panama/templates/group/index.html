@@ -1,9 +1,25 @@
 {% ckan_extends %}
+{% set statistics = h.get_site_statistics() %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Groups'), controller='group', action='index' %}</li>
+{% endblock %}
 
 {% block secondary_content %}
-    <div class="vertical-separator">
-        <div class="vertical-separator-padding">
-           {{ super() }}
+  <div class="vertical-separator">
+    <div class="vertical-separator-padding">
+      <div class="module module-narrow module-shallow">
+        <h2 class="module-heading">
+          <i class="icon-info-sign"></i>
+          {{ _('Statistics') }}
+        </h2>
+        <div class="module-content">
+          <p>
+            {{ _('Number of groups') }}: <strong>{{ statistics.group_count }}</strong>
+            {{ _('Number of datasets') }}: <strong>{{ statistics.dataset_count }}</strong>
+          </p>
         </div>
+      </div>
     </div>
+  </div>
 {% endblock %}
