@@ -1,0 +1,276 @@
+# Translations template for ckan.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the ckan project.
+#
+# Translators:
+# Adrià Mercader <adria.mercader@okfn.org>, 2015
+# Carlos Brys <brys@misiones.gov.ar>, 2013,2015
+# Félix Pedrera <felix.pedrera@gmail.com>, 2012
+# <internet@davidread.org>, 2011
+# Isabel Ruiz, 2013
+# javierdcm <javierdcm@gmail.com>, 2012
+# Jesús García <>, 2012
+# Jesus Redondo <jesusredondo@unex.es>, 2013
+# Open Knowledge Foundation <translations@okfn.org>, 2011
+# urkonn <urkonn@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: CKAN\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-11-26 13:42+0000\n"
+"PO-Revision-Date: 2015-12-06 19:52+0000\n"
+"Last-Translator: Carlos Brys <brys@misiones.gov.ar>\n"
+"Language-Team: Spanish (http://www.transifex.com/okfn/ckan/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.1.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ckan/authz.py:189 ckan/templates/header.html:14
+#: ckanext/panama/templates/header.html:16
+msgid "Admin"
+msgstr "Administrador"
+
+#: ckan/controllers/admin.py:51 ckan/templates/header.html:106
+#: ckan/templates/group/about.html:3 ckan/templates/group/read_base.html:19
+#: ckan/templates/home/about.html:3 ckan/templates/home/about.html:6
+#: ckan/templates/home/about.html:16 ckan/templates/organization/about.html:3
+#: ckan/templates/organization/read_base.html:19
+#: ckan/templates/user/edit_user_form.html:14
+#: ckanext/panama/templates/header.html:118
+#: ckanext/panama/templates/home/about.html:7
+msgid "About"
+msgstr "Acerca de"
+
+#: ckan/controllers/group.py:311 ckan/controllers/home.py:68
+#: ckan/controllers/package.py:240 ckan/lib/helpers.py:756
+#: ckan/templates/header.html:104 ckan/templates/group/base_form_page.html:6
+#: ckan/templates/group/edit.html:4 ckan/templates/group/edit_base.html:3
+#: ckan/templates/group/edit_base.html:8 ckan/templates/group/index.html:3
+#: ckan/templates/group/index.html:6 ckan/templates/group/index.html:18
+#: ckan/templates/group/members.html:3 ckan/templates/group/read_base.html:3
+#: ckan/templates/group/read_base.html:6
+#: ckan/templates/package/group_list.html:5
+#: ckan/templates/package/read_base.html:20
+#: ckan/templates/revision/diff.html:16 ckan/templates/revision/read.html:84
+#: ckanext/panama/templates/header.html:115
+#: ckanext/panama/templates/group/index.html:5
+#: ckanext/panama/templates/group/read_base.html:4
+#: ckanext/panama/templates/home/index.html:11
+msgid "Groups"
+msgstr "Temáticas"
+
+#: ckan/controllers/group.py:312 ckan/controllers/home.py:69
+#: ckan/controllers/package.py:241 ckan/lib/helpers.py:757
+#: ckan/logic/__init__.py:100
+#: ckan/templates/package/snippets/package_basic_fields.html:24
+#: ckan/templates/snippets/context/dataset.html:17
+#: ckan/templates/tag/index.html:3 ckan/templates/tag/index.html:6
+#: ckan/templates/tag/index.html:12
+#: ckanext/panama/templates/home/index.html:32
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: ckan/public/base/javascript/modules/image-upload.js:17
+#: ckan/templates/group/snippets/group_item.html:43
+#: ckan/templates/macros/form.html:235
+#: ckan/templates/snippets/search_form.html:66
+#: ckanext/panama/templates/showcase/snippets/showcase_item.html:46
+msgid "Remove"
+msgstr "Quitar"
+
+#: ckan/templates/header.html:12 ckanext/panama/templates/header.html:14
+msgid "Sysadmin settings"
+msgstr "Opciones de Administrador"
+
+#: ckan/templates/header.html:19 ckanext/panama/templates/header.html:22
+msgid "View profile"
+msgstr "Ver perfil"
+
+#: ckan/templates/header.html:26 ckanext/panama/templates/header.html:29
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] "Panel de Control (%(num)d nuevo elemento)"
+msgstr[1] "Panel de Control (%(num)d nuevos elementos)"
+
+#: ckan/templates/header.html:29 ckan/templates/user/dashboard.html:6
+#: ckanext/panama/templates/header.html:33
+msgid "Dashboard"
+msgstr "Pizarra"
+
+#: ckan/templates/header.html:35 ckan/templates/user/dashboard.html:16
+#: ckanext/panama/templates/header.html:40
+msgid "Edit settings"
+msgstr "Editar opciones"
+
+#: ckan/templates/header.html:37 ckanext/panama/templates/header.html:42
+msgid "Settings"
+msgstr "Configuración"
+
+#: ckan/templates/header.html:43 ckan/templates/header.html:45
+#: ckanext/panama/templates/header.html:48
+#: ckanext/panama/templates/header.html:50
+msgid "Log out"
+msgstr "Salir"
+
+#: ckan/templates/header.html:56 ckan/templates/user/logout_first.html:15
+#: ckanext/panama/templates/header.html:61
+msgid "Log in"
+msgstr "Iniciar Sesión"
+
+#: ckan/templates/header.html:58 ckan/templates/user/new.html:3
+#: ckanext/panama/templates/header.html:63
+msgid "Register"
+msgstr "Registro"
+
+#: ckan/templates/header.html:103 ckan/templates/group/read_base.html:17
+#: ckan/templates/group/snippets/info.html:36
+#: ckan/templates/organization/bulk_process.html:20
+#: ckan/templates/organization/edit_base.html:23
+#: ckan/templates/organization/read_base.html:17
+#: ckan/templates/package/base.html:7 ckan/templates/package/base.html:17
+#: ckan/templates/package/base.html:21 ckan/templates/package/search.html:4
+#: ckan/templates/package/search.html:7
+#: ckan/templates/package/snippets/new_package_breadcrumb.html:1
+#: ckan/templates/revision/diff.html:11 ckan/templates/revision/read.html:65
+#: ckan/templates/snippets/organization.html:59
+#: ckan/templates/snippets/context/group.html:17
+#: ckan/templates/snippets/context/user.html:19
+#: ckan/templates/user/read.html:5 ckan/templates/user/read_base.html:19
+#: ckan/templates/user/read_base.html:53
+#: ckanext/panama/templates/header.html:114
+msgid "Datasets"
+msgstr "Datos"
+
+#: ckan/templates/header.html:116 ckanext/panama/templates/header.html:137
+msgid "Search Datasets"
+msgstr "Buscar conjuntos de datos"
+
+#: ckan/templates/header.html:117 ckan/templates/home/snippets/search.html:11
+#: ckan/templates/snippets/simple_search.html:5
+#: ckan/templates/user/snippets/user_search.html:6
+#: ckanext/panama/templates/header.html:138
+msgid "Search"
+msgstr "Búsqueda"
+
+#: ckan/templates/group/snippets/group_item.html:38
+#: ckan/templates/group/snippets/group_item.html:39
+#: ckanext/panama/templates/home/snippets/group_item.html:5
+msgid "View {name}"
+msgstr "Ver {name}"
+
+#: ckan/templates/package/resource_data.html:52
+#: ckan/templates/package/resource_read.html:157
+#: ckanext/panama/templates/scheming/package/resource_read.html:24
+msgid "Last updated"
+msgstr "Última actualización"
+
+#: ckan/templates/package/resource_read.html:147
+#: ckanext/panama/templates/scheming/package/resource_read.html:13
+msgid "Additional Information"
+msgstr "Información adicional"
+
+#: ckan/templates/package/resource_read.html:151
+#: ckan/templates/package/snippets/additional_info.html:6
+#: ckan/templates/revision/diff.html:43
+#: ckan/templates/snippets/additional_info.html:11
+#: ckanext/panama/templates/scheming/package/resource_read.html:17
+msgid "Field"
+msgstr "Campo"
+
+#: ckan/templates/package/resource_read.html:152
+#: ckan/templates/package/snippets/additional_info.html:7
+#: ckan/templates/snippets/additional_info.html:12
+#: ckanext/panama/templates/scheming/package/resource_read.html:18
+msgid "Value"
+msgstr "Valor"
+
+#: ckan/templates/package/resource_read.html:158
+#: ckan/templates/package/resource_read.html:162
+#: ckan/templates/package/resource_read.html:166
+#: ckanext/panama/templates/scheming/package/resource_read.html:25
+#: ckanext/panama/templates/scheming/package/resource_read.html:31
+#: ckanext/panama/templates/scheming/package/resource_read.html:37
+msgid "unknown"
+msgstr "desconocido"
+
+#: ckan/templates/package/resource_read.html:161
+#: ckan/templates/package/snippets/additional_info.html:70
+#: ckanext/panama/templates/scheming/package/resource_read.html:30
+msgid "Created"
+msgstr "Creado"
+
+#: ckan/templates/package/resource_read.html:165
+#: ckan/templates/package/snippets/resource_form.html:37
+#: ckan/templates/package/snippets/resource_info.html:16
+#: ckanext/panama/templates/scheming/package/resource_read.html:36
+msgid "Format"
+msgstr "Formato"
+
+#: ckan/templates/package/resource_read.html:169
+#: ckan/templates/package/snippets/package_basic_fields.html:30
+#: ckan/templates/snippets/license.html:21
+#: ckanext/panama/templates/scheming/package/resource_read.html:42
+msgid "License"
+msgstr "Licencia"
+
+#: ckan/templates/package/snippets/additional_info.html:56
+#: ckan/templates/package/snippets/package_basic_fields.html:108
+#: ckan/templates/user/read_base.html:91
+#: ckanext/panama/templates/scheming/package/snippets/additional_info.html:31
+msgid "State"
+msgstr "Estado"
+
+#: ckan/templates/snippets/home_breadcrumb_item.html:2
+#: ckanext/panama/templates/header.html:113
+msgid "Home"
+msgstr "Inicio"
+
+#: ckan/templates/snippets/package_item.html:57
+#: ckanext/panama/templates/home/snippets/recently_updated_datasets.html:8
+msgid "This dataset has no description"
+msgstr "Este conjunto de datos no tiene una descripción"
+
+#: ckan/templates/snippets/subscribe.html:4
+#: ckan/templates/user/edit_user_form.html:12
+#: ckan/templates/user/new_user_form.html:7
+#: ckan/templates/user/read_base.html:82
+#: ckanext/panama/templates/contact/form.html:27
+msgid "Email"
+msgstr "Dirección de correo electrónico"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:114
+#: ckanext/panama/templates/group/index.html:19
+msgid "Number of datasets"
+msgstr "Número de conjuntos de datos"
+
+#: ckanext/panama/templates/package/search.html:11
+msgid "Filter by location"
+msgstr "Filtrar por localización"
+
+#: ckanext/panama/templates/package/search.html:13
+msgid "Clear"
+msgstr "Claro"
+
+#: ckanext/panama/templates/group/index.html:18
+msgid "Number of groups"
+msgstr "Número de tematicas"
+
+#: ckanext/panama/templates/group/index.html:19
+msgid "Number of datasets"
+msgstr "Número de datos"
+
+#: ckanext/panama/templates/home/index.html:27
+msgid "Recent Datasets"
+msgstr "Datos Recientes"
+
+#: ckanext/panama/templates/header.html:117
+msgid "Contact"
+msgstr "Contáctenos"
+
+#: ckanext/panama/templates/group/index.html:14
+msgid "Statistics"
+msgstr "Estadística"
