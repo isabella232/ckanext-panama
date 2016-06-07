@@ -771,3 +771,8 @@ msgstr[1] "{number} Destacados encontrados"
 #: ckanext/showcase/templates/showcase/snippets/showcase_search_result_text.html:10
 msgid "No showcases found"
 msgstr "No se encontraron Destacados"
+
+msgid "{number} group found"
+msgid_plural "{number} groups found"
+msgstr[0] "{number} temática encontrado"
+msgstr[1] "{number} temáticas encontrados"
