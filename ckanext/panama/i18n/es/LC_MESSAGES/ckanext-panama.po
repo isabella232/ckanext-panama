@@ -772,6 +772,16 @@ msgstr[1] "{number} Destacados encontrados"
 msgid "No showcases found"
 msgstr "No se encontraron Destacados"
 
+#: ckan/templates/snippets/search_result_text.html:21
+msgid "{number} group found for \"{query}\""
+msgid_plural "{number} groups found for \"{query}\""
+msgstr[0] "{number} temática encontrado para \"{query}\""
+msgstr[1] "{number} temáticas encontrados para \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:22
+msgid "No groups found for \"{query}\""
+msgstr "Lo sentimos, no se encontraron temáticas para \"{query}\""
+
 msgid "{number} group found"
 msgid_plural "{number} groups found"
 msgstr[0] "{number} temática encontrado"
