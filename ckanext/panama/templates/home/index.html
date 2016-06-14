@@ -1,5 +1,5 @@
 {% resource 'panama/css/index.css' %}
-{% resource 'panama/js/tagmodule.js' %}
+{% resource 'panama/tagcloud' %}
 {% ckan_extends %}
 
 {% block content %}
@@ -30,13 +30,18 @@
 
             <div class="span6">
                 <h2 class="indexh">{{ _('Tags') }}</h2>
-                <div id="tagcloud" data-module="tagmodule">
-                    {% set tags = h.get_facet_items_dict('tags', limit=30) %}
+                <div id="tagcloud">
+                  <canvas width="500px" height="350px" id="myCanvas" data-module="tagmodule">
+                    Etikets
+                  </canvas>
+                </div>
+            </div>
+                <div id="tags">
+                  {% set tags = h.get_facet_items_dict('tags', limit=26) %}
                     {% for tag in tags %}
                         <a href="/dataset?tags={{ tag.name }}" rel="{{ tag.count }}">{{ tag.display_name }}</a>
                     {% endfor %}
                 </div>
-            </div>
             </div>
         </div>
     </div>

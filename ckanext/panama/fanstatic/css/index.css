@@ -83,10 +83,6 @@
     color: #151515;
 }
 
-#tagcloud {
-    padding-top: 25px;
-}
-
 #tagcloud > a {
     margin: 20px;
 }
