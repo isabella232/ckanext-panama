@@ -253,7 +253,7 @@ msgstr "Filtrar por localización"
 
 #: ckanext/panama/templates/package/search.html:13
 msgid "Clear"
-msgstr "Claro"
+msgstr "Borrar"
 
 #: ckanext/panama/templates/group/index.html:18
 msgid "Number of groups"
