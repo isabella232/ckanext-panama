@@ -787,7 +787,7 @@ msgid_plural "{number} groups found"
 msgstr[0] "{number} temática encontrado"
 msgstr[1] "{number} temáticas encontrados"
 
-msgid "Your comment has been sent, we will answer you as soon as possible"
+msgid "Your comment has been sent, we will answer you as soon as possible."
 msgstr "Su comentario ha side enviado, responderemos con la mayor prontitud."
 
 msgid "Questions? Comments? We are always glad to hear from you!"
