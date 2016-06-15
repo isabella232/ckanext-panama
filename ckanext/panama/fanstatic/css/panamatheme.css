@@ -343,6 +343,10 @@ header,
     .vertical-separator-padding {
         padding-right: 0px;
     }
+
+    .site-description {
+        display: none;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -417,5 +421,23 @@ header,
     .masthead .site-search {
         left: 190px;
     }
+}
 
+@media (min-width: 767px) {
+    .stages {
+        margin: -20px 0px 20px 130px;
+    }
+}
+
+@media (max-width: 767px) {
+    .stages {
+        margin: 0px -25px 30px;
+    }
+}
+
+.site-description {
+    color: #0e76bc;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
 }
