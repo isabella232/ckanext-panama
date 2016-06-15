@@ -10,7 +10,7 @@ import ckan.lib.helpers as h
 import socket
 from pylons import config
 from ckan.common import _, request, c, response
-from ckanext.contact.interfaces import IContact
+from ckanext.panama.interfaces import IContact
 
 log = logging.getLogger(__name__)
 
