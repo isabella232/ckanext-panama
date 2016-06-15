@@ -441,3 +441,19 @@ header,
     font-weight: 800;
     font-style: italic;
 }
+
+#tags {
+    padding-top: 25px;
+}
+
+#tags > a {
+    margin: 20px;
+}
+
+#tags {
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
