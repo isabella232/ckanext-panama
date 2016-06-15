@@ -795,3 +795,6 @@ msgstr "Preguntas? Comentarios? Siempre Estaremos complacidos de saber de Usted!
 
 msgid "Sorry, there was an error sending the email. Please try again later."
 msgstr "Ha habido un error de enviar el correo electrónico . Por favor, inténtelo de nuevo más tarde."
+
+msgid "Contact Us"
+msgstr "Contáctenos"
