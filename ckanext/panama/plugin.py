@@ -7,6 +7,8 @@ from ckanext.scheming.plugins import (SchemingGroupsPlugin,
                                       SchemingOrganizationsPlugin)
 
 import ckanext.panama.helpers as panama_helpers
+from ckanext.panama.auth import send_contact
+
 
 import logging
 log = logging.getLogger(__name__)
@@ -133,3 +135,33 @@ class PanamaSchemingOrganizationsPlugin(SchemingOrganizationsPlugin):
 
     def about_template(self):
         return 'organization/about.html'
+
+
+class PanamaContactPlugin(plugins.SingletonPlugin):
+    """
+    CKAN Contact Extension
+    This is modified version of ckanext-contact that can be found on:
+    https://github.com/NaturalHistoryMuseum/ckanext-contact
+    """
+    plugins.implements(plugins.IRoutes, inherit=True)
+    plugins.implements(plugins.IAuthFunctions)
+
+    ## IRoutes
+    def before_map(self, map):
+
+        # Add controller for KE EMu specimen records
+        map.connect('contact_form', '/contact',
+                    controller='ckanext.panama.controllers.contact:ContactController',
+                    action='form')
+
+        # Add AJAX request handler
+        map.connect('contact_ajax_submit', '/contact/ajax',
+                    controller='ckanext.panama.controllers.contact:ContactController',
+                    action='ajax_submit')
+
+        return map
+
+    ## IAuthFunctions
+    def get_auth_functions(self):
+        return {'send_contact': send_contact}
+

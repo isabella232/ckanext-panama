@@ -83,6 +83,7 @@ setup(
         panama_organizations=ckanext.panama.plugin:PanamaOrganizationPlugin
         panama_scheming_groups=ckanext.panama.plugin:PanamaSchemingGroupsPlugin
         panama_scheming_organizations=ckanext.panama.plugin:PanamaSchemingOrganizationsPlugin
+        panama_contact=ckanext.panama.plugin:PanamaContactPlugin
 
         [paste.paster_command]
         create_featured_groups=ckanext.panama.commands:CreateFeaturedGroups

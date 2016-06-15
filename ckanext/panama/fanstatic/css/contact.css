@@ -85,6 +85,12 @@ fieldset {
     }
 }
 
+@media (max-width: 979px) {
+    #razon {
+        display: none;
+    }
+}
+
 #submit > img {
     width: 100%;
 }
