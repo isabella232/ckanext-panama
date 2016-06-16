@@ -243,7 +243,7 @@ msgstr "Los parámetros requeridos debe estar en forma de un diccionario en cód
 #: ckan/controllers/group.py:951 ckan/controllers/package.py:1270
 #: ckan/controllers/package.py:1285
 msgid "Group not found"
-msgstr "Temática no encontrado"
+msgstr "Temática no encontrada"
 
 #: ckan/controllers/feed.py:234
 msgid "Organization not found"
@@ -3913,18 +3913,18 @@ msgstr "Conjuntos de datos no encontrados"
 #: ckan/templates/snippets/search_result_text.html:21
 msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
-msgstr[0] "{number} temática encontrado para \"{query}\""
-msgstr[1] "{number} temáticas encontrados para \"{query}\""
+msgstr[0] "{number} temática encontrada para \"{query}\""
+msgstr[1] "{number} temáticas encontradas para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
-msgstr "Lo sentimos, no se encontraron temáticas para \"{query}\""
+msgstr "Lo sentimos, no se encontraran temáticas para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:23
 msgid "{number} group found"
 msgid_plural "{number} groups found"
-msgstr[0] "{number} temática encontrado"
-msgstr[1] "{number} temáticas encontrados"
+msgstr[0] "{number} temática encontrada"
+msgstr[1] "{number} temáticas encontradas"
 
 #: ckan/templates/snippets/search_result_text.html:24
 msgid "No groups found"

@@ -775,20 +775,23 @@ msgstr "No se encontraron Destacados"
 #: ckan/templates/snippets/search_result_text.html:21
 msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
-msgstr[0] "{number} temática encontrado para \"{query}\""
-msgstr[1] "{number} temáticas encontrados para \"{query}\""
+msgstr[0] "{number} temática encontrada para \"{query}\""
+msgstr[1] "{number} temáticas encontradas para \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
-msgstr "Lo sentimos, no se encontraron temáticas para \"{query}\""
+msgstr "Lo sentimos, no se encontraran temáticas para \"{query}\""
 
 msgid "{number} group found"
 msgid_plural "{number} groups found"
-msgstr[0] "{number} temática encontrado"
-msgstr[1] "{number} temáticas encontrados"
+msgstr[0] "{number} temática encontrada"
+msgstr[1] "{number} temáticas encontradas"
+
+msgid "Thank you!"
+msgstr "Gracias!"
 
 msgid "Your comment has been sent, we will answer you as soon as possible."
-msgstr "Su comentario ha side enviado, responderemos con la mayor prontitud."
+msgstr "Su comentario ha sido enviado, responderemos con la mayor prontitud."
 
 msgid "Questions? Comments? We are always glad to hear from you!"
 msgstr "Preguntas? Comentarios? Siempre Estaremos complacidos de saber de Usted!"
