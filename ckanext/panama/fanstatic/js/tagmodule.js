@@ -125,7 +125,6 @@ ckan.module('tagmodule', function ($, _) {
 
   return {
     initialize: function () {
-      console.log(this.el.context.id);
       (function () {
         try {
           TagCanvas.Start('myCanvas', 'tags', {
