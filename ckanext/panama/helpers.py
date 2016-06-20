@@ -36,3 +36,13 @@ def get_recently_updated_panama_datasets(limit=3):
             package['days_ago_modified'] = ((datetime.now() - modified).days)
             pkgs.append(package)
         return pkgs
+
+def panama_get_group_fluent_name(group):
+    group = toolkit.get_action('group_show')(data_dict={'id': group})
+    # TODO: This shouldn't be hardcoded, find why h.lang() doesn't return any value
+    try:
+        fluent_title = group['fluent_title']['es']
+    except KeyError:
+        fluent_title = group['name']
+
+    return fluent_title

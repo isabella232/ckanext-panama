@@ -70,7 +70,9 @@ class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_extra_exclude_fields':
                 panama_helpers.get_extra_exclude_fields,
             'get_recently_updated_panama_datasets':
-                panama_helpers.get_recently_updated_panama_datasets
+                panama_helpers.get_recently_updated_panama_datasets,
+            'panama_get_group_fluent_name':
+                panama_helpers.panama_get_group_fluent_name
         }
 
     def before_index(self, pkg_dict):
