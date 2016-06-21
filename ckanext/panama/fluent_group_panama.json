@@ -9,7 +9,6 @@
       "preset": "fluent_text",
       "form_placeholder": "eg. Yellow Submarine",
       "display_snippet": "panama_fluent_text.html",
-      "form_snippet": "panama_fluent_text.html",
       "first_form_attrs": {
           "data-module": "slug-preview-target"
       }
@@ -28,10 +27,13 @@
       "form_placeholder": "A little information about my group..."
     },
     {
-      "field_name": "url",
+      "field_name": "image_url",
       "label": "Image URL",
+      "validators": "ignore_missing",
+      "form_snippet": "panama_upload.html",
       "preset": "resource_url_upload",
-      "form_placeholder": "http://example.com/my-image.jpg"
+      "form_placeholder": "http://example.com/my-image.jpg",
+      "upload_label": "Photo"
     }
   ]
 }
