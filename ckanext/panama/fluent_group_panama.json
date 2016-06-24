@@ -19,7 +19,7 @@
       "label": "URL",
       "validators": "not_empty unicode name_validator group_name_validator",
       "form_snippet": "slug.html",
-      "form_placeholder": "my-organization"
+      "form_placeholder": "my-group"
     },
     {
       "field_name": "fluent_description",
