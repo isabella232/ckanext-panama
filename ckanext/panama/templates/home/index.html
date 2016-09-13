@@ -11,7 +11,7 @@
                 <h2>{{ _('Groups') }}</h2>
                 <div class="row">
                     <ul class="responsive-grid">
-                        {% for group in h.get_featured_groups(count=12) %}
+                        {% for group in h.panama_get_all_groups() %}
                             {% snippet "home/snippets/group_item.html", group=group, position=loop.index %}
                         {% endfor %}
                     </ul>

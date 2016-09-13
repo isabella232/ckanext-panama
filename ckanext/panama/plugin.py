@@ -72,7 +72,9 @@ class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_recently_updated_panama_datasets':
                 panama_helpers.get_recently_updated_panama_datasets,
             'panama_get_group_fluent_name':
-                panama_helpers.panama_get_group_fluent_name
+                panama_helpers.panama_get_group_fluent_name,
+            'panama_get_all_groups':
+                panama_helpers.panama_get_all_groups
         }
 
     def before_index(self, pkg_dict):

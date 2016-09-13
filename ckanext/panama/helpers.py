@@ -46,3 +46,11 @@ def panama_get_group_fluent_name(group):
         fluent_title = group['name']
 
     return fluent_title
+
+def panama_get_all_groups():
+
+    groups = toolkit.get_action('group_list')(data_dict={
+        'include_extras': True, 'all_fields': True
+    })
+
+    return groups
