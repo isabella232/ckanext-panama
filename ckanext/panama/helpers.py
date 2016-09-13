@@ -3,10 +3,37 @@ from pylons import config
 from ckan.plugins import toolkit
 from ckan.lib import search
 from datetime import date, datetime, timedelta
+import ckan.lib.helpers as lib_helpers
 
 import logging
 log = logging.getLogger(__name__)
 
+
+def _fluent_to_core_fields(dic, fluent_core_field_map):
+    '''Update the core field value in the dic with the mapped fluent
+    field value in the current language, or of the default locale.'''
+
+    def add_to_dict(d, field_map):
+        fluent_field = d.get(field_map[0])
+        if fluent_field and type(fluent_field) is dict:
+            current_lang = lib_helpers.lang()
+            if fluent_field.get(current_lang):
+                d[field_map[1]] = fluent_field[current_lang]
+            else:
+                d[field_map[1]] = \
+                    fluent_field[get_default_locale()]
+        return d
+
+    for field_map in fluent_core_field_map:
+        # for packages and groups
+        add_to_dict(dic, field_map)
+
+        # for resources (if present)
+        if dic.get('resources'):
+            for res_dict in dic['resources']:
+                add_to_dict(res_dict, field_map)
+
+    return dic
 
 def get_default_locale():
     return config.get('ckan.locale_default', 'en')
@@ -47,10 +74,9 @@ def panama_get_group_fluent_name(group):
 
     return fluent_title
 
-def panama_get_all_groups():
+def panama_get_groups_len():
 
-    groups = toolkit.get_action('group_list')(data_dict={
-        'include_extras': True, 'all_fields': True
-    })
+    groups = toolkit.get_action('group_list')(data_dict={})
+    groups_len = len(groups)
 
-    return groups
+    return groups_len
