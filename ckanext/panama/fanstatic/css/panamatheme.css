@@ -256,6 +256,7 @@ header,
 
 .navbar .nav > li > a {
     padding-right: 5px;
+    padding-left: 9px;
 }
 
 #mainnav a {
