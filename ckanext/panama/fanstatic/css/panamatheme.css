@@ -256,12 +256,12 @@ header,
 
 .navbar .nav > li > a {
     padding-right: 5px;
-    padding-left: 9px;
+    padding-left: 8px;
 }
 
 #mainnav a {
     color: #000;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: lighter;
 }
 
