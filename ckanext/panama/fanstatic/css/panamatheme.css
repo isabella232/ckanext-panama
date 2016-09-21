@@ -255,13 +255,13 @@ header,
 }
 
 .navbar .nav > li > a {
-    padding-right: 5px;
-    padding-left: 8px;
+    padding-right: 2px;
+    padding-left: 5px;
 }
 
 #mainnav a {
     color: #000;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: lighter;
 }
 
