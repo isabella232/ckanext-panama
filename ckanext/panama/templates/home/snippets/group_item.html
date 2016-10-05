@@ -2,8 +2,9 @@
 {% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
 
 {% block item %}
+{{h.debug_inspect(group)}}
     <li class="maincat">
-        <a href="{{ url }}" title="{{ group.fluent_tooltip_description['en'] }}">
+        <a href="{{ url }}" title="{{ 'test' }}">
             <span class="image">
               <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
                    alt="{{ group.name }}" data-adaptive-background>
