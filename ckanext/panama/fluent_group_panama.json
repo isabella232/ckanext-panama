@@ -28,6 +28,12 @@
       "form_placeholder": "A little information about my group..."
     },
     {
+      "field_name": "fluent_tooltip_description",
+      "label": "Tooltip description",
+      "preset": "fluent_text",
+      "form_placeholder": "Description for tooltip on homepage..."
+    },
+    {
       "field_name": "image_url",
       "label": "Image URL",
       "validators": "ignore_missing",
