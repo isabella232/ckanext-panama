@@ -1,10 +1,14 @@
 {% set type = group.type or 'group' %}
 {% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
-
+{% set locale = request.environ.get('CKAN_LANG') %}
+{% if group.fluent_tooltip_description %}
+  {% set tooltip_text = group.fluent_tooltip_description[locale] %}
+{% else %}
+  {% set tooltip_text = '' %}
+{% endif %}
 {% block item %}
-{{h.debug_inspect(group)}}
     <li class="maincat">
-        <a href="{{ url }}" title="{{ 'test' }}">
+        <a href="{{ url }}" title="{{ tooltip_text }}">
             <span class="image">
               <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
                    alt="{{ group.name }}" data-adaptive-background>
