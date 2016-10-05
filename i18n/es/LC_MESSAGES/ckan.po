@@ -4557,3 +4557,9 @@ msgstr "Url de página web"
 #: ckanext/webpageview/theme/templates/webpage_form.html:3
 msgid "eg. http://example.com (if blank uses resource url)"
 msgstr "ej: http://example.com (si está en blanco usa la url del recurso)"
+
+msgid "Tooltip description"
+msgstr "Descripción Tooltip"
+
+msgid "Description for tooltip on homepage..."
+msgstr "Descripción para información sobre herramientas en la página de inicio"
