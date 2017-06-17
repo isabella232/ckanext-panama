@@ -473,3 +473,150 @@ header,
     margin: 0 auto; 
     width: 490px;
 }
+
+.maincat-group {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.maincat-group h2 {
+    padding-bottom: 15px;
+}
+
+.maincat {
+    list-style-type: none;
+    text-align: center;
+}
+
+.maincat img {
+    height: 90px;
+}
+
+.maincat img:hover {
+    opacity: 0.5;
+}
+
+.maincat h3 {
+    font-size: 16px;
+    font-style: normal;
+    color: #2d3f53;
+}
+
+/* General grid styles */
+.responsive-grid {
+    list-style: none;
+    padding: 0px 30px 0 30px;
+    margin: 0;
+    height: 350px;
+    overflow-y: scroll;
+    margin-bottom: 30px
+}
+
+/* Clear floats */
+.responsive-grid:before,
+.responsive-grid:after {
+    content: " ";
+    display: table;
+}
+
+.responsive-grid:after {
+    clear: both;
+}
+
+.responsive-grid li {
+    width: 16%;
+    float: left;
+    text-align: center;
+    height: 225px;
+}
+
+.responsive-grid li a {
+    display: block;
+}
+
+.homepage {
+    margin-bottom: 40px;
+}
+
+.homepage .latest-datasets {
+    margin: 15px 0 10px 0
+}
+
+.homepage .latest-datasets > li {
+    display: block;
+    margin-bottom: 20px
+}
+
+.homepage .latest-datasets > li .post {
+    display: block
+}
+
+.homepage .latest-datasets > li .date {
+    margin-top: 10px
+}
+
+.homepage .latest-datasets > li h4 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-size: 16px;
+    color: #151515;
+}
+
+#tagcloud > a {
+    margin: 20px;
+}
+
+#tagcloud {
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.well {
+    padding-left: 0px;
+}
+
+.homepage .latest-datasets > li .formats {
+    margin: 10px 0 0 0
+}
+
+.homepage .latest-datasets > li .label {
+    opacity: .6
+}
+
+.latest-datasets > .well {
+    background: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.formats li {
+    margin-right: 5px;
+}
+
+.days-modified {
+    float: right;
+    font-size: 12px;
+    margin-top: -18px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 62.75em) {
+    .responsive-grid li {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 41.6em) {
+    .responsive-grid li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    .responsive-grid {
+        font-size: 80%;
+    }
+}
