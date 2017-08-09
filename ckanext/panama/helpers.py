@@ -67,7 +67,11 @@ def panama_get_featured_groups(count=1):
 def featured_group_org(items, get_action, list_action, count):
     def get_group(id):
         context = {'ignore_auth': True, 'limits': {'packages': 2}, 'for_view': True}
-        data_dict = {'id': id, 'include_datasets': False, 'include_users': False}
+        # No need for tags, extras or users
+        data_dict = {'id': id, 'include_datasets': False,
+                     'include_users': False,
+                     'include_tags': False,
+                     'include_extras': False}
 
         try:
             out = logic.get_action(get_action)(context, data_dict)
