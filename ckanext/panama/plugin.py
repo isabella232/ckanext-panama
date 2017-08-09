@@ -116,9 +116,7 @@ class PanamaOrganizationPlugin(plugins.SingletonPlugin):
                              ('fluent_description', 'description')]
 
     def before_view(self, grp_dict):
-        grp = toolkit.get_action('organization_show')(
-            data_dict={'id': grp_dict['id']})
-        grp = _fluent_to_core_fields(grp, self.fluent_core_field_map)
+        grp = _fluent_to_core_fields(grp_dict, self.fluent_core_field_map)
         grp_dict['display_name'] = grp['display_name']
         grp_dict['description'] = grp['description']
 
