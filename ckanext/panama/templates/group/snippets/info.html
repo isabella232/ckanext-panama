@@ -1,0 +1,16 @@
+{% set locale = request.environ.get('CKAN_LANG') %}
+{% ckan_extends %}
+
+{% block heading %}
+<h1 class="heading">
+  {% if locale == 'es' %}
+      <h3>{{ group.fluent_title.es }}</h3>
+  {% endif %}
+   {% if locale == 'en' %}
+      <h3>{{ group.fluent_title.en }}</h3>
+  {% endif %}
+  {% if group.state == 'deleted' %}
+    [{{ _('Deleted') }}]
+  {% endif %}
+</h1>
+{% endblock %}
