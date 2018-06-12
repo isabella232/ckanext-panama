@@ -13,7 +13,12 @@
               <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
                    alt="{{ group.name }}" data-adaptive-background>
             </span>
-            <h3>{{ group.name }}</h3>
+            {% if locale == 'es' %}
+                <h3>{{ group.fluent_title.es }}</h3>
+            {% endif %}
+             {% if locale == 'en' %}
+                <h3>{{ group.fluent_title.en }}</h3>
+            {% endif %}
         </a>
     </li>
 {% endblock %}
