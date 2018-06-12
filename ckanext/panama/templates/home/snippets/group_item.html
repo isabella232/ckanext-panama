@@ -13,7 +13,7 @@
               <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}"
                    alt="{{ group.name }}" data-adaptive-background>
             </span>
-            <h3>{{ group.display_name }}</h3>
+            <h3>{{ group.name }}</h3>
         </a>
     </li>
 {% endblock %}
