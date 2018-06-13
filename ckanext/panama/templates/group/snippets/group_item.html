@@ -1,0 +1,32 @@
+{#
+Renders a media item for a group. This should be used in a list.
+
+group - A group dict.
+
+Example:
+
+    <ul class="media-grid">
+      {% for group in groups %}
+        {% snippet "group/snippets/group_item.html", group=group %}
+      {% endfor %}
+    </ul>
+#}
+{% ckan_extends %}
+{% set locale = request.environ.get('CKAN_LANG') %}
+
+{% if locale == 'es' %}
+    {% set name = group.fluent_title.es %}
+ {% endif %}
+ {% if locale == 'en' %}
+    {% set name = group.fluent_title.en %}
+ {% endif %}
+{% block title %}
+  <h3 class="media-heading">{{ name }}</h3>
+{% endblock %}
+
+{% block link %}
+<a href="{{ url }}" title="View {{name}}" class="media-view">
+  <span>{{ _('View {name}').format(name=name) }}</span>
+</a>
+{% endblock %}
+
