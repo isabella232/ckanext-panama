@@ -1,16 +1,31 @@
 {% set locale = request.environ.get('CKAN_LANG') %}
 {% ckan_extends %}
-
 {% block heading %}
 <h1 class="heading">
-  {% if locale == 'es' %}
-      <h3>{{ group.fluent_title.es }}</h3>
-  {% endif %}
+   {% if locale == 'es' %}
+    <h3>{{ group.fluent_title.es }}</h3>
+   {% endif %}
    {% if locale == 'en' %}
-      <h3>{{ group.fluent_title.en }}</h3>
-  {% endif %}
-  {% if group.state == 'deleted' %}
+    <h3>{{ group.fluent_title.en }}</h3>
+   {% endif %}
+   {% if group.state == 'deleted' %}
     [{{ _('Deleted') }}]
-  {% endif %}
+   {% endif %}
 </h1>
+{% endblock %}
+<!- TODO: setup fluent properties in group instead of extending the templates
+    more info: https://github.com/ckan/ckanext-fluent#fluent_core_translated-fields
+->
+{% block description %}
+    {% if group.fluent_description %}
+    <p>
+       {% if locale == 'es' %}
+        {{ h.markdown_extract(group.fluent_description.es, 180) }}
+       {% endif %}
+       {% if locale == 'en' %}
+        {{ h.markdown_extract(group.fluent_description.en, 180) }}
+       {% endif %}
+        {% link_for _('read more'), controller='group', action='about', id=group.name %}
+    </p>
+    {% endif %}
 {% endblock %}
