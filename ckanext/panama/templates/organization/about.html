@@ -1,0 +1,14 @@
+<!- TODO: setup fluent properties in group instead of extending the templates
+    more info: https://github.com/ckan/ckanext-fluent#fluent_core_translated-fields
+->
+{% ckan_extends %}
+{% set locale = request.environ.get('CKAN_LANG') %}
+
+{% block organization_description %}
+   {% if locale == 'es' %}
+      {{ h.render_markdown(c.group_dict.fluent_description.es) }}
+   {% endif %}
+   {% if locale == 'en' %}
+      {{ h.render_markdown(c.group_dict.fluent_description.en) }}
+   {% endif %}
+{% endblock %}
