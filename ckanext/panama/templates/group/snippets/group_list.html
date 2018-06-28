@@ -12,7 +12,11 @@ Example:
 <ul class="media-grid" data-module="media-grid">
 	{% block group_list_inner %}
   {% for group in h.panama_get_featured_groups(count=h.panama_get_groups_len()) %}
-    {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
+    {% for g in groups %}
+        {% if group.name == g.name %}
+            {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
+        {% endif %}
+    {% endfor %}
   {% endfor %}
   {% endblock %}
 </ul>

@@ -5,17 +5,19 @@
 {% set locale = request.environ.get('CKAN_LANG') %}
 
 {% block description %}
-{% if organization.fluent_description.es or organization.fluent_description.en %}
-<p>
-   {% if locale == 'es' %}
-    {{ h.markdown_extract(organization.fluent_description.es, 180) }}
-   {% endif %}
-   {% if locale == 'en' %}
-    {{ h.markdown_extract(organization.fluent_description.en, 180) }}
-   {% endif %}
-    {% link_for _('read more'), controller='organization', action='about', id=organization.name %}
-</p>
-{% else %}
-<p class="empty">{{ _('There is no description for this organization') }}</p>
+{% if organization.fluent_description %}
+    {% if organization.fluent_description.es or organization.fluent_description.en %}
+    <p>
+       {% if locale == 'es' %}
+        {{ h.markdown_extract(organization.fluent_description.es, 180) }}
+       {% endif %}
+       {% if locale == 'en' %}
+        {{ h.markdown_extract(organization.fluent_description.en, 180) }}
+       {% endif %}
+        {% link_for _('read more'), controller='organization', action='about', id=organization.name %}
+    </p>
+    {% else %}
+    <p class="empty">{{ _('There is no description for this organization') }}</p>
+    {% endif %}
 {% endif %}
 {% endblock %}
