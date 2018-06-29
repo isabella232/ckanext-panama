@@ -14,7 +14,7 @@ Example:
   {% for group in h.panama_get_featured_groups(count=h.panama_get_groups_len()) %}
     {% for g in groups %}
         {% if group.name == g.name %}
-            {% snippet "group/snippets/group_item.html", group=group, position=loop.index %}
+            {% snippet "group/snippets/group_item.html", group=group, cgroup=g, position=loop.index %}
         {% endif %}
     {% endfor %}
   {% endfor %}
