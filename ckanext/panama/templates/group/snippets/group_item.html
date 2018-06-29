@@ -11,8 +11,14 @@ Example:
       {% endfor %}
     </ul>
 #}
-
 {% set type = group.type or 'group' %}
+{% set locale = request.environ.get('CKAN_LANG') %}
+{% if locale == 'es' %}
+{% set name = group.fluent_title.es %}
+    {% endif %}
+{% if locale == 'en' %}
+    {% set name = group.fluent_title.en %}
+{% endif %}
 {% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
 {% block item %}
 <li class="media-item">
@@ -20,20 +26,12 @@ Example:
   {% block image %}
     <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="media-image">
   {% endblock %}
- {% set locale = request.environ.get('CKAN_LANG') %}
-
-{% if locale == 'es' %}
-    {% set name = group.fluent_title.es %}
- {% endif %}
- {% if locale == 'en' %}
-    {% set name = group.fluent_title.en %}
- {% endif %}
 {% block title %}
   <h3 class="media-heading">{{ name }}</h3>
 {% endblock %}
   {% block description %}
-    {% if group.description %}
-      <p>{{ h.markdown_extract(group.description, extract_length=80) }}</p>
+    {% if cgroup.description %}
+      <p>{{ h.markdown_extract(cgroup.description, extract_length=80) }}</p>
     {% endif %}
   {% endblock %}
   {% block datasets %}
