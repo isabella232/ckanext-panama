@@ -75,7 +75,9 @@ class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
             'panama_get_groups_len':
                 panama_helpers.panama_get_groups_len,
             'panama_get_featured_groups':
-                panama_helpers.panama_get_featured_groups
+                panama_helpers.panama_get_featured_groups,
+            'panama_get_group':
+                panama_helpers.get_group
         }
 
     def before_index(self, pkg_dict):

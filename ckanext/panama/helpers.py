@@ -94,3 +94,11 @@ def featured_group_org(items, get_action, list_action, count):
             break
 
     return groups_data
+
+
+def get_group(id):
+    try:
+        group = logic.get_action('group_show')({}, {'id': id})
+        return group
+    except Exception:
+        return {}
