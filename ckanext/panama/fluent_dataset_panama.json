@@ -107,7 +107,8 @@
     {
       "field_name": "format",
       "label": "Format",
-      "preset": "resource_format_autocomplete"
+      "preset": "resource_format_autocomplete",
+      "validators": "format_validator"
     }
   ]
 }

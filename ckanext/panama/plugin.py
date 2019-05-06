@@ -8,6 +8,7 @@ from ckanext.scheming.plugins import (SchemingGroupsPlugin,
 
 import ckanext.panama.helpers as panama_helpers
 from ckanext.panama.auth import send_contact
+from ckanext.panama import validators
 
 
 import logging
@@ -47,6 +48,7 @@ class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.ITranslation)
+    plugins.implements(plugins.IValidators)
 
     # mapping between fluent field and core field
     fluent_core_field_map = [('fluent_title', 'title'),
@@ -89,6 +91,11 @@ class PanamaPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     def after_show(self, context, pkg_dict):
         return _fluent_to_core_fields(pkg_dict, self.fluent_core_field_map)
+
+    def get_validators(self):
+        return {
+            'format_validator': validators.format_validator
+        }
 
 
 class PanamaGroupPlugin(plugins.SingletonPlugin):
