@@ -9,8 +9,8 @@
             {% endif %}
             {% if dataset.resources %}
                 <ul class="formats">
-                    {% for resource in dataset.resources[:4] %}
-                        <li class="format-label" data-format="{{ resource.format|lower }}">{{ resource.format }}</li>
+                    {% for format in h.dict_list_reduce(dataset.resources, 'format') %}
+                        <li class="format-label" data-format="{{ format|lower }}">{{ format }}</li>
                     {% endfor %}
                 </ul>
             {% endif %}
